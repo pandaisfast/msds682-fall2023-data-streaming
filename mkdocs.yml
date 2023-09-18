@@ -1,0 +1,151 @@
+# Basics
+site_name: MSDS 682 Data Stream Processing
+site_url: https://github.com/pandaisfast/fall2023-msds682-data-streaming-processing
+site_author: Jeremy Gu
+site_description: >-
+  Data Streaming, Kafka, MSDS
+
+# Repository
+repo_name: fall2023-msds682-data-streaming-processing
+repo_url: https://github.com/pandaisfast/fall2023-msds682-data-streaming-processing
+
+# Change the middle parameter to the default branch, "master" or "main"
+edit_uri: edit/master/docs
+
+
+
+# Copyright
+copyright: Copyright &copy; 2023 Jeremy W. Gu
+
+theme:
+  logo: assets/usf_f_c_2c_rgb.png
+  name: material
+  language: 'en' ##zh
+  features:
+    - navigation.sections
+    - navigation.tracking
+    - navigation.indexes ## need some work here
+    - navigation.top # Back to Top button
+    - navigation.path #[paid feature]
+    ## Tooltips #[paid feature]
+    - content.tooltips
+    # TOC
+    # - toc.follow
+    # - toc.integrate
+
+    # When expansion is enabled, the left sidebar will expand all collapsible subsections by default
+    #- navigation.expand 
+  # colors
+  palette:
+    # Define the default light mode
+    - scheme: default
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Define the dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # [paid feature] System preference setup for automatic theme switching
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+plugins:
+  - search: # necessary for search to work
+      lang:
+        - en
+        - de
+        - ja
+        - zh
+  - minify: # https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/minification/
+      minify_html: true 
+  # - git-revision-date-localized # Revision date https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/revision-date/
+
+# markdown_extensions:
+  # TOC
+  # - toc:
+  #     permalink: true
+
+markdown_extensions:
+  # ## Tooltips [paid feature]
+  # - abbr
+  # - attr_list
+  # - pymdownx.snippets
+  ## emoji and icon
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
+  ## Footnote
+  - footnotes
+  ## Annotations
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  ## Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+# Navigation
+nav:
+  - "Overview":
+    - index.md
+  - "Table of Contents":
+    - index.md
+  - "Part 1: Introduction to Kafka and Data Streaming":
+    - ch1/index.md
+    - "1.1 Introduction to Data Streaming": ch1/ch1.1.md
+    - "1.2 Intermediate Python Wrap-Up": ch1/ch1.2.md
+    - "1.3 Review Docker and FastAPI": ch1/ch1.3.md
+    - "1.4 Data Ingestion with Kafka": ch1/ch1.4.md
+  - "Part 2: Advanced Kafka Concepts":
+    - ch2/index.md
+    - "2.1 Kafka Streaming, Data Schemas, and Apache Avro": ch2/ch2.1.md
+    - "2.2 Kafka Connect and REST Proxy": ch2/ch2.2.md
+  - "Part 3: More on Kafka":
+    - ch3/index.md
+    - "3.1 Stream Processing with Faust and KSQL": ch3/ch3.1.md
+    - "3.2 Comprehensive Review of Kafka": ch3/ch3.2.md
+  - "Part 4: Spark and Streaming API":
+    - ch4/index.md
+    - "4.1 Introduction to PySpark": ch4/ch4.1.md
+    - "4.2 Streaming Dataframes, Views, and Spark SQL": ch4/ch4.2.md
+    - "4.3 Working with Joins and JSON": ch4/ch4.3.md
+    - "4.4 Optional: Redis, Base64, and JSON": ch4/ch4.4.md
+  - "Part 5: Real-Life Projects":
+    - ch5/index.md
+    - "5.1 Real-Time ETA Prediction": ch5/ch5.1.md
+    - "5.2 Real-Time Fraud Detection": ch5/ch5.2.md
+  - "Appendix 1: Frequently Asked Questions":
+    - appendix1/index.md
+  - "Appendix 2: Recommended Courses, Books, Videos, Blogs":
+    - appendix2/index.md
+  - Changelog:
+    - "Book Updates": changelog.md

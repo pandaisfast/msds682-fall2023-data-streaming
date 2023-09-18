@@ -1,0 +1,7 @@
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-git-revision-date-localized-plugin
+jinja2
+mkdocs-static-i18n
+mkdocs-i18n
+mkdocs-git-revision-date-localized-plugin
