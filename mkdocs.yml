@@ -6,8 +6,8 @@ site_description: >-
   Data Streaming, Kafka, MSDS
 
 # Repository
-repo_name: pandaisfast.github.io
-repo_url: https://github.com/pandaisfast/pandaisfast.github.io
+repo_name: pandaisfast/msds682-fall2023-data-streaming
+repo_url: https://github.com/pandaisfast/msds682-fall2023-data-streaming
 
 # Change the middle parameter to the default branch, "master" or "main"
 edit_uri: edit/master/docs
