@@ -1,13 +1,13 @@
 # Basics
 site_name: MSDS 682 Data Stream Processing
-site_url: https://github.com/pandaisfast/fall2023-msds682-data-streaming-processing
+site_url: https://pandaisfast.github.io/msds682-fall2023/
 site_author: Jeremy Gu
 site_description: >-
   Data Streaming, Kafka, MSDS
 
 # Repository
-repo_name: fall2023-msds682-data-streaming-processing
-repo_url: https://github.com/pandaisfast/fall2023-msds682-data-streaming-processing
+repo_name: pandaisfast.github.io
+repo_url: https://github.com/pandaisfast/pandaisfast.github.io
 
 # Change the middle parameter to the default branch, "master" or "main"
 edit_uri: edit/master/docs
@@ -78,7 +78,6 @@ plugins:
         - en
         - de
         - ja
-        - zh
   - minify: # https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/minification/
       minify_html: true 
   # - git-revision-date-localized # Revision date https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/revision-date/
@@ -125,27 +124,34 @@ nav:
     - "1.2 Intermediate Python Wrap-Up": ch1/ch1.2.md
     - "1.3 Review Docker and FastAPI": ch1/ch1.3.md
     - "1.4 Data Ingestion with Kafka": ch1/ch1.4.md
+    - "1.5 Homework #1": ch1/ch1.5hw.md
   - "Part 2: Advanced Kafka Concepts":
     - ch2/index.md
     - "2.1 Kafka Streaming, Data Schemas, and Apache Avro": ch2/ch2.1.md
     - "2.2 Kafka Connect and REST Proxy": ch2/ch2.2.md
+    - "2.3 Homework #2": ch2/ch2.3hw.md
   - "Part 3: More on Kafka":
     - ch3/index.md
     - "3.1 Stream Processing with Faust and KSQL": ch3/ch3.1.md
     - "3.2 Comprehensive Review of Kafka": ch3/ch3.2.md
+    - "3.3 Homework #3": ch3/ch3.3hw.md
   - "Part 4: Spark and Streaming API":
     - ch4/index.md
     - "4.1 Introduction to PySpark": ch4/ch4.1.md
     - "4.2 Streaming Dataframes, Views, and Spark SQL": ch4/ch4.2.md
     - "4.3 Working with Joins and JSON": ch4/ch4.3.md
     - "4.4 Optional: Redis, Base64, and JSON": ch4/ch4.4.md
+    - "4.5 Homework #4": ch4/ch4.5hw.md
   - "Part 5: Real-Life Projects":
     - ch5/index.md
     - "5.1 Real-Time ETA Prediction": ch5/ch5.1.md
     - "5.2 Real-Time Fraud Detection": ch5/ch5.2.md
+    - "5.3 Homework #5": ch5/ch5.3hw.md
+  - "Course Project":
+    - "Project Introduction": course_project/project_intro.md
+    - "Project Guidelines": course_project/project_guidelines.md
+    - "Project Examples": course_project/project_examples.md
   - "Appendix 1: Frequently Asked Questions":
     - appendix1/index.md
   - "Appendix 2: Recommended Courses, Books, Videos, Blogs":
     - appendix2/index.md
-  - Changelog:
-    - "Book Updates": changelog.md
