@@ -2,6 +2,8 @@
 
 ## Course Objectives
 
+This is an applied course in data streaming. We will cover ___.
+
 
 
 ## Prerequisites
@@ -21,9 +23,9 @@ Basics in Machine Learning Ops
 
 Encouraging effective group discussions and collaborations. 
 
-Writing your own code and homework independently. Do not copy & paste code from your classmates.
+Write your own code and homework independently. Do not copy & paste code from your classmates.
 
-Using ChatGPT or other LLM models is **acceptable**. But you need to tell instructor which line(s) of code or which pieces of the homework are from those LLM AI models. Most of the time. it's easier to write your own code than debug what ChatGPT gives to you.
+Using ChatGPT or other LLM models is **acceptable**. But you need to write your own words and own code. If so, please tell instructor which line(s) of code or which pieces of the homework are from those LLM AI models. Most of the time. it's easier to write your own code than debug what ChatGPT gives to you. 
 
 Zero tolerance in **CHEATING** and **PLAGIARISM**.
 
@@ -54,10 +56,10 @@ All code must be with comments that explain.
 
 60% Homework 
 
-HW1 Week 1 
-HW2 Week 2
-HW3 Week 3
-HW4 Week 5
+HW1 Week 1 15%
+HW2 Week 2 15%
+HW3 Week 3 15%
+HW4 Week 5 15%
 
 40% Group Project (2 or 3 people each group.)
 - All members should equally contribute to the project.
