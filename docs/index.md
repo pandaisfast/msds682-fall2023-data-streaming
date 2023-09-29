@@ -16,20 +16,7 @@ Basics in Machine Learning Models
 
 Basics in Machine Learning Ops
 
-<div>
-<div style="border: 2px solid blue; padding: 10px; background-color: yellow; box-shadow: 5px 5px 10px gray;">
 
-<span style="color:black; font-size:20px; background-color: None ; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;">**Highlights**</span>
-
-Encouraging effective group discussions and collaborations. 
-
-Write your own code and homework independently. Do not copy & paste code from your classmates.
-
-Using ChatGPT or other LLM models is **acceptable**. But you need to write your own words and own code. If so, please tell instructor which line(s) of code or which pieces of the homework are from those LLM AI models. Most of the time. it's easier to write your own code than debug what ChatGPT gives to you. 
-
-Zero tolerance in **CHEATING** and **PLAGIARISM**.
-
-</div>
 
 
 
@@ -121,3 +108,14 @@ Final Project
 - [ ] Lecture 23: Watch Streams Video, Date Completed: _______
 - [ ] Complete Lab 12: Macros, Streams, Date Completed: _______
 - [ ] Lecture 24: Watch Declarative Programming I Video, Date Completed: _______
+
+
+<div>
+    <div style="border: 2px solid blue; padding: 10px; background-color: yellow; box-shadow: 5px 5px 10px gray;">
+        <span style="color:black; font-size:20px; background-color: transparent; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;">**Highlights**</span>
+        <p>Encouraging effective group discussions and collaborations.</p>
+        <p>Write your own code and homework independently. Do not copy & paste code from your classmates.</p>
+        <p>Using ChatGPT or other LLM models is <strong>acceptable</strong>. But you need to write your own words and own code. If so, please tell the instructor which line(s) of code or which pieces of the homework are from those LLM AI models. Most of the time, it's easier to write your own code than debug what ChatGPT gives to you.</p>
+        <p>Zero tolerance in <strong>CHEATING</strong> and <strong>PLAGIARISM</strong>.</p>
+    </div>
+</div>
