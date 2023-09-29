@@ -2,6 +2,8 @@ tmr/
 .DS_Store
 README_web.md
 
+# python -m venv venv
+# 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
