@@ -18,8 +18,6 @@ Basics in Machine Learning Ops
 
 
 
-
-
 ## Course Contents
 
 Python-based. The course is heavily relied on python code. 

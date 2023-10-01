@@ -1,6 +1,6 @@
 # Basics
 site_name: MSDS 682 Data Stream Processing
-site_url: https://pandaisfast.github.io/msds682-fall2023/
+site_url: https://pandaisfast.github.io/msds682-fall2023-data-streaming
 site_author: Jeremy Wenxiao Gu
 site_description: >-
   Data Streaming, Kafka, MSDS
@@ -11,8 +11,6 @@ repo_url: https://github.com/pandaisfast/msds682-fall2023-data-streaming
 
 # Change the middle parameter to the default branch, "master" or "main"
 edit_uri: edit/master/docs
-
-
 
 # Copyright
 copyright: Copyright &copy; 2023 Jeremy Wenxiao Gu
