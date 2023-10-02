@@ -2,6 +2,11 @@
 
 **MSDS 682** (**Fall 2023**)
 
+<div style="border: 2px solid blue; padding: 10px; background-color: yellow; box-shadow: 5px 5px 10px gray;">
+    <span style="color:black; font-size:20px; background-color: transparent; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;">Note</span>
+    <p>This Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use Canvas for the latest syllabus.</p>
+</div>
+
 v1.21 Tentative Syllabus.
 
 ## Instructor Inforomation 
@@ -181,12 +186,3 @@ Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 - **Absence Due to Illness:** If you are unable to attend a lecture due to sickness or any other unavoidable circumstance, please notify me in advance. 
 - **No Distractions:** Mobile phones and other electronic devices should be kept silent and should not be used during class time. 
 
-<div>
-    <div style="border: 2px solid blue; padding: 10px; background-color: yellow; box-shadow: 5px 5px 10px gray;">
-        <span style="color:black; font-size:20px; background-color: transparent; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;">**Highlights**</span>
-        <p>Encouraging effective group discussions and collaborations.</p>
-        <p>Write your own code and homework independently. Do not copy & paste code from your classmates.</p>
-        <p>Using ChatGPT or other LLM models is <strong>acceptable</strong>. But you need to write your own words and own code. If so, please tell the instructor which line(s) of code or which pieces of the homework are from those LLM AI models. Most of the time, it's easier to write your own code than debug what ChatGPT gives to you.</p>
-        <p>Zero tolerance in <strong>CHEATING</strong> and <strong>PLAGIARISM</strong>.</p>
-    </div>
-</div>
