@@ -110,7 +110,7 @@ markdown_extensions:
   ## Admonitions
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  # - pymdownx.superfences
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

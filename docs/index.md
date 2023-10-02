@@ -1,13 +1,10 @@
 # Syllabus
 
-<div style="border: 2px solid blue; padding: 10px; background-color: yellow; box-shadow: 5px 5px 10px gray;">
-    <span style="color:black; font-size:20px; background-color: transparent; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;">Note</span>
-    <p>This Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use Canvas for the latest syllabus.</p>
-</div>
+???+ warning
+
+    This Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use Canvas for the latest syllabus.
 
 **MSDS 682** (**Fall 2023**)
-
-
 
 v1.21 Tentative Syllabus.
 
