@@ -2,11 +2,11 @@
 
 ???+ warning
 
-    This Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use Canvas for the latest syllabus.
+    This version of Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use our course website on USF Canvas for the latest syllabus.
 
 **MSDS 682** (**Fall 2023**)
 
-v1.21 Tentative Syllabus.
+v1.30 Tentative Syllabus.
 
 ## Instructor Inforomation 
 - Jeremy W. Gu
@@ -26,7 +26,7 @@ Students will gain hands-on experience with Apache Kafka and other modern data e
 
 To ensure your success in this course, the following knowledge prerequisites are essential:
 
-- **Statistics:** Grasp of concepts like mean, variance, data visualization, tabular data, and pandas. Relevant courses include MSDS 623 - Multivariate Statistics and MSDS 593 - EDA and Visualization.
+- **Statistics:** Grasp of concepts like mean, variance, data visualization, tabular data, and pandas. Relevant courses include MSDS 504 - Review Probability and Stats and MSDS 593 - EDA and Visualization.
 - **Python:** Familiarity with Python Classes and Objects. While proficiency with the Mac command line is beneficial, there will be no focus on Java or Scala in the JVM ecosystem.
 - **SQL and Data Pipelines:** Knowledge derived from courses such as MSDS 681 - Data Lakehouse is ideal.
 - **Machine Learning:** Familiarity with scikit-learn, supervised and unsupervised learning, evaluation of model performance, and feature selection. Courses like MSDS 621 - Intro to Machine Learning, MSDS 630 - Advanced Machine Learning, and MSDS 680 - Machine Learning Operations are recommended, though not mandatory.
