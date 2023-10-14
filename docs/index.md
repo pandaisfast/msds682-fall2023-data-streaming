@@ -1,26 +1,21 @@
-# Syllabus
-
-???+ warning
-
-    This version of Syllabus is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use our course website on USF Canvas for the latest syllabus.
-
-**MSDS 682** (**Fall 2023**)
-
-v1.30 Tentative Syllabus.
-
-## Instructor Inforomation 
-- Jeremy W. Gu
-- wgu9@usfca.edu
-  
-### Office Hours
-- 8:45-9:30am on Wed
-- Office Location: Virtual Zoom
+# MSDS 682 Data Streaming Processing Overview
 
 ## Course Description
 
 This class are to equips students with the skills necessary to process continuous data streams at scale and in real-time.
 
 Students will gain hands-on experience with Apache Kafka and other modern data engineering tools. We focus on blending foundational knowledge with hands-on skills, often using real-world examples to anchor theoretical concepts. The primary programming language for the course is Python. 
+
+- Semester: Fall 2023
+- Graduate Course in Data Engineering Track
+
+### Instructor Inforomation 
+- Jeremy W. Gu
+- wgu9@usfca.edu
+  
+### Office Hours
+- 8:45-9:30am on Wed
+- Office Location: Virtual Zoom
 
 ### Prerequisite Details
 
@@ -54,7 +49,6 @@ The course focuses on core concepts like the Kafka ecosystem while providing pra
 
 
 ## Textbooks & Recommended Readings
-
 
 <div class="result" markdown>
 
@@ -150,29 +144,32 @@ While the grading system in this course is a measure of academic performance, it
 In reality, certain missteps or attitude problems can have severe consequences, while standout performances can bring about many opportunities in your career. These are aspects indirectly reflected in your grades. If you earn an 'A+', there’s a high probability that you will be a superstar in the workplace. Earning a 'B' is also commendable, as in a professional setting, it typically signifies "Meeting Expectations", meaning that you are performing your job. Conversely, if your grades are low, you might face significant risks of criticism from both managers and peers during performance evaluations. I hope every student can treat this course as a practical experience of the working world.
 
 
-
-
 ## Course Schedule
+
+???+ warning
+
+    This version of Course Schedule is tentative and may be delayed in updates. For the most accurate and up-to-date information, please use our course website on USF Canvas for the latest syllabus.
+    
 
 Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 
-- Lecture #1: Oct 20, 2023 (F) - San Francisco-101 Howard 156
-- Lecture #2: Oct 24, 2023 (T) - San Francisco-101 Howard 157 (Tentative Room)
-- Lecture #3: Oct 27, 2023 (F) - San Francisco-101 Howard 156
+- Lecture #1: Oct 20, 2023 (F) - San Francisco-101 Howard 529
+- Lecture #2: Oct 24, 2023 (T) - San Francisco-101 Howard 529
+- Lecture #3: Oct 27, 2023 (F) - San Francisco-101 Howard 529
 - Assignment #1: Due by 11:59pm on 10/28/2023
-- Lecture #4: Oct 31, 2023 (T) - San Francisco-101 Howard 156
-- Lecture #5: Nov 03, 2023 (F) - San Francisco-101 Howard 156
+- Lecture #4: Oct 31, 2023 (T) - San Francisco-101 Howard 529
+- Lecture #5: Nov 03, 2023 (F) - San Francisco-101 Howard 529
 - Assignment #2: Due by 11:59pm on 11/4/2023
-- Lecture #6: Nov 07, 2023 (T) - San Francisco-101 Howard 156
+- Lecture #6: Nov 07, 2023 (T) - San Francisco-101 Howard 529
 - Lecture #7: Nov 10, 2023 (F) - San Francisco-101 Howard 529 | 60-min Midterm Exam
-- Lecture #8: Nov 14, 2023 (T) - San Francisco-101 Howard 156
+- Lecture #8: Nov 14, 2023 (T) - San Francisco-101 Howard 529
 - Final Project Proposal: Due by 11:59pm on 11/13/2023
-- Lecture #9: Nov 17, 2023 (F) - San Francisco-101 Howard 156
-- Lecture #10: Nov 21, 2023 (T) - San Francisco-101 Howard 156
+- Lecture #9: Nov 17, 2023 (F) - San Francisco-101 Howard 527
+- Lecture #10: Nov 21, 2023 (T) - San Francisco-101 Howard 529
 - Assignment #3: Due by 11:59pm on 11/22/2023
-- Lecture #11: Nov 24, 2023 (F) - San Francisco-101 Howard 156 | Thanksgiving: No Class
-- Lecture #12: Nov 28, 2023 (T) - San Francisco-101 Howard 156
-- Lecture #13: Dec 01, 2023 (F) - San Francisco-101 Howard 156
+- Lecture #11: Nov 24, 2023 (F) - San Francisco-101 Howard 529 | Thanksgiving: No Class
+- Lecture #12: Nov 28, 2023 (T) - San Francisco-101 Howard 529
+- Lecture #13: Dec 01, 2023 (F) - San Francisco-101 Howard 529
 - Final Project Written Report and Code: Due by 11:59pm on 12/3/2023
 - Final Project Presentation Deck: Must be submitted before the final lecture 5:30pm on 12/5/2023
 - Lecture #14: Dec 05, 2023 (T) - San Francisco-101 Howard 157 (Tentative Room)
@@ -184,4 +181,6 @@ Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 - **Use of Laptops:** Please keep your laptops closed unless instructed otherwise, specifically during demo or exercise sessions. This is to ensure focus and participation during lectures.
 - **Absence Due to Illness:** If you are unable to attend a lecture due to sickness or any other unavoidable circumstance, please notify me in advance. 
 - **No Distractions:** Mobile phones and other electronic devices should be kept silent and should not be used during class time. 
+
+## Lecture references
 

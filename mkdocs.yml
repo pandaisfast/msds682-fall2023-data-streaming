@@ -124,103 +124,63 @@ markdown_extensions:
 nav:
   - "Overview":
     - index.md
-  - "Lec 1: 10/20 F (Room 156)":
+  - "Lec 1: 10/20 F (Room 529)":
     - lec1/index.md
-    - "1.1": lec1/1.1.md
-    - "1.2": lec1/1.2.md
-    - "1.3": lec1/1.3.md
-    - "1.4": lec1/1.4.md
+    - "Additional Topics": lec1/1.1.md
+    - "Demo": lec1/demo_or_exercise.md
 
-  - "Lec 2: 10/24 T (Room 157)":
+  - "Lec 2: 10/24 T (Room 529)":
     - lec2/index.md
-    - "2.1": lec2/2.1.md
-    - "2.2": lec2/2.2.md
-    - "2.3": lec2/2.3.md
-    - "2.4": lec2/2.4.md
-
-  - "Lec 3: 10/27 F (Room 156)":
+    - "Additional Topics": lec2/2.1.md
+    - "Demo": lec2/demo_or_exercise.md
+    
+  - "Lec 3: 10/27 F (Room 529)":
     - lec3/index.md
-    - "3.1": lec3/3.1.md
-    - "3.2": lec3/3.2.md
-    - "3.3": lec3/3.3.md
-    - "3.4": lec3/3.4.md
+    - "Additional Topics": lec3/3.1.md
 
-  - "Lec 4: 10/31 T (Room 156)":
+  - "Lec 4: 10/31 T (Room 529)":
     - lec4/index.md
-    - "4.1": lec4/4.1.md
-    - "4.2": lec4/4.2.md
-    - "4.3": lec4/4.3.md
-    - "4.4": lec4/4.4.md
+    - "Additional Topics": lec4/4.1.md
 
-  - "Lec 5: 11/03 F (Room 156)":
+  - "Lec 5: 11/03 F (Room 529)":
     - lec5/index.md
-    - "5.1": lec5/5.1.md
-    - "5.2": lec5/5.2.md
-    - "5.3": lec5/5.3.md
-    - "5.4": lec5/5.4.md
+    - "Additional Topics": lec5/5.1.md
 
-  - "Lec 6: 11/07 T (Room 156)":
+  - "Lec 6: 11/07 T (Room 529)":
     - lec6/index.md
-    - "6.1": lec6/6.1.md
-    - "6.2": lec6/6.2.md
-    - "6.3": lec6/6.3.md
-    - "6.4": lec6/6.4.md
+    - "Additional Topics": lec6/6.1.md
 
   - "Lec 7: 11/10 F (Room 529)":
     - lec7/index.md
-    - "7.1": lec7/7.1.md
-    - "7.2": lec7/7.2.md
-    - "7.3": lec7/7.3.md
-    - "7.4": lec7/7.4.md
+    - "Additional Topics": lec7/7.1.md
 
-  - "Lec 8: 11/14 T (Room 156)":
+  - "Lec 8: 11/14 T (Room 529)":
     - lec8/index.md
-    - "8.1": lec8/8.1.md
-    - "8.2": lec8/8.2.md
-    - "8.3": lec8/8.3.md
-    - "8.4": lec8/8.4.md
+    - "Additional Topics": lec8/8.1.md
 
-  - "Lec 9: 11/17 F (Room 156)":
+  - "Lec 9: 11/17 F (Room 527)":
     - lec9/index.md
-    - "9.1": lec9/9.1.md
-    - "9.2": lec9/9.2.md
-    - "9.3": lec9/9.3.md
-    - "9.4": lec9/9.4.md
+    - "Additional Topics": lec9/9.1.md
 
-  - "Lec 10: 11/21 T (Room 156)":
+  - "Lec 10: 11/21 T (Room 529)":
     - lec10/index.md
-    - "10.1": lec10/10.1.md
-    - "10.2": lec10/10.2.md
-    - "10.3": lec10/10.3.md
-    - "10.4": lec10/10.4.md
+    - "Additional Topics": lec10/10.1.md
 
-  - "Lec 11: 11/24 F (Room 156)":
+  - "Lec 11: 11/24 F (Room 529)":
     - lec11/index.md
-    - "11.1": lec11/11.1.md
-    - "11.2": lec11/11.2.md
-    - "11.3": lec11/11.3.md
-    - "11.4": lec11/11.4.md
+    - "Additional Topics": lec11/11.1.md
 
-  - "Lec 12: 11/28 T (Room 156)":
+  - "Lec 12: 11/28 T (Room 529)":
     - lec12/index.md
-    - "12.1": lec12/12.1.md
-    - "12.2": lec12/12.2.md
-    - "12.3": lec12/12.3.md
-    - "12.4": lec12/12.4.md
+    - "Additional Topics": lec12/12.1.md
 
-  - "Lec 13: 12/01 F (Room 156)":
+  - "Lec 13: 12/01 F (Room 529)":
     - lec13/index.md
-    - "13.1": lec13/13.1.md
-    - "13.2": lec13/13.2.md
-    - "13.3": lec13/13.3.md
-    - "13.4": lec13/13.4.md
+    - "Additional Topics": lec13/13.1.md
 
   - "Lec 14: 12/05 T (Room 157)":
     - lec14/index.md
-    - "14.1": lec14/14.1.md
-    - "14.2": lec14/14.2.md
-    - "14.3": lec14/14.3.md
-    - "14.4": lec14/14.4.md
+    - "Additional Topics": lec14/14.1.md
 
 
   - "Course Project":
