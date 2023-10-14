@@ -3,7 +3,7 @@ site_name: MSDS 682 Data Stream Processing
 site_url: https://pandaisfast.github.io/msds682-fall2023-data-streaming
 site_author: Jeremy Wenxiao Gu
 site_description: >-
-  Data Streaming, Kafka, MSDS
+  Data Streaming, Confluent, Kafka, MSDS, University of San Francisco, usfca
 
 # Repository
 repo_name: pandaisfast/msds682-fall2023-data-streaming
@@ -34,6 +34,8 @@ theme:
     # - toc.integrate
     # When expansion is enabled, the left sidebar will expand all collapsible subsections by default
     # - navigation.expand 
+    # code blocks
+    - content.code.copy
   # colors
   palette:
     # Define the default light mode
@@ -116,7 +118,14 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
+  # code-blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 
 
@@ -181,7 +190,6 @@ nav:
   - "Lec 14: 12/05 T (Room 157)":
     - lec14/index.md
     - "Additional Topics": lec14/14.1.md
-
 
   - "Course Project":
     - "Project Introduction": course_project/project_intro.md
