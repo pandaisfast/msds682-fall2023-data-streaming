@@ -8,7 +8,11 @@
 - **Take an iterative approach to learning.** Get the basics working first, and later dive into refinement, optimizations and customizations. 
 
 --- 
-We have two options of setting up Kafka clusters here. The first one with Confluent Cloud + CLI (python) will be used in our classroom. 
+We have three options of setting up Kafka clusters [(Official Confluent Platform reference)](https://docs.confluent.io/platform/6.2/overview.html). The first one with Confluent Cloud + CLI (python) will be used in our classroom. The Confluent Cloud path provides a fully managed service so you don't have to provision your own Kafka infrastructure. The local install and Docker approaches (Method #2 and #3) allow you to run Confluent Platform locally for development and testing. 
+
+- Method #1: Managed Confluent Cloud
+- Method #2: Local Docker install
+- Method #3: Local native install (not covered)
 
 ### Method #1: Confluent Cloud + CLI
 
@@ -23,16 +27,12 @@ Confluent Cloud is a managed Kafka service provided by Confluent, the company be
 ### Method #2: Local Cluster (self-managed)
 
 #### Overview
-This is about setting up a Kafka cluster on your local machine, often for development or testing purposes. There are resources available in the official documentation to guide through this setup. 
+This is about setting up a Kafka cluster on your local machine, often for development or testing purposes. There are resources available in the official documentation to guide through this setup. Although Method #2 is not our default setup for demos, I highly recommend self-study so you may find it useful in your course project with other services to be developed on local machine. 
 
 #### Docker with Confluent Platform
 Docker provides a way to run applications securely isolated in a container, packaged with all its dependencies and libraries. The links you provided are guides on setting up the Confluent Platform (which includes Kafka and other tools) using Docker containers.
 
-**Note**: the native Kafka installation is another option, though Docker provides isolation benefits.
-
-1. **Confluent Platform Quickstart with Docker**: This provides a quick way to get up and running with the entire Confluent Platform on your local machine using Docker. The platform includes Kafka, Confluent Schema Registry, Kafka Connect, and more. The quickstart guide will walk you through the basics of setting it up.
-
-2. **Docker Installation for Confluent Platform**: This is a more detailed guide on installing and using the Confluent Platform with Docker. It covers prerequisites, installation steps, and other important information.
+**Note**: The native Kafka installation is one option, though Docker provides isolation benefits.
 
 #### Benefits of Docker-based Local Setup
 1. **Isolation**: Ensures Kafka doesn't interfere with other software on your machine.
@@ -41,7 +41,7 @@ Docker provides a way to run applications securely isolated in a container, pack
 
 ## Instructions (Method #1)
 
-**Step 1.Confluent Cloud Account**: Sign up and be aware of the $400 free credit. [Link](https://www.confluent.io/confluent-cloud/tryfree/?session_ref=https://developer.confluent.io/courses/kafka-python/intro/&_gl=1*1e4ufod*_ga*MTg5NDI2ODI5Ny4xNjk1NTEwNjc0*_ga_D2D3EGKSGD*MTY5NzMwNzI2Ni4yNC4xLjE2OTczMDczNDYuNTIuMC4w&_ga=2.204271120.1862646819.1697302973-1894268297.1695510674&_gac=1.188677466.1695601991.Cj0KCQjwvL-oBhCxARIsAHkOiu0Qq0KqM4-LH4cC6o3wgdTVyQEfSfrYdVRJYwbdU1dcwF4afsnO1kgaAsvqEALw_wcB).
+**Step 1.Confluent Cloud Account**: Sign up and be aware of the $400 free credit. [Link](https://www.confluent.io/confluent-cloud/tryfree/?session_ref=https://developer.confluent.io/courses/kafka-python/intro).
 
 
 <div class="result" markdown>
@@ -240,12 +240,20 @@ Again, I recommend using [official guide](https://docs.confluent.io/confluent-cl
 **Cluster**: Within an environment, you can have one or more Kafka clusters. A cluster is essentially a running instance of Kafka, where you can produce and consume messages. 
 
 1. **Logging in to Confluent Cloud**: 
+
+    This logs you into Confluent Cloud via the CLI and saves your credentials locally, so you don't need to enter them repeatedly.
     ```bash
     confluent login --save
     ```
-    This logs you into Confluent Cloud via the CLI and saves your credentials locally, so you don't need to enter them repeatedly.
+
+    If you're using SSO (google login for example), then run this code below.
+
+    ```
+    confluent login --no-browser
+    ```
 
 2. **Listing Environments**:
+
     ```bash
     confluent environment list
     ```
@@ -343,14 +351,14 @@ There are many concepts so far. I hope to give a clear picture of the relationsh
 ### Confluent Cloud Hierarchy:
 
 1. **Environment**:
-   - An environment is the highest level of organization in Confluent Cloud. It's a logical grouping mechanism.
-   - You might have different environments for different purposes, such as Development, Testing, and Production.
-   - Each environment has a unique **Environment ID**.
+      - An environment is the highest level of organization in Confluent Cloud. It's a logical grouping mechanism.
+      - You might have different environments for different purposes, such as Development, Testing, and Production.
+      - Each environment has a unique **Environment ID**.
 
 2. **Cluster**:
-   - *Within an environment*, you can have one or more Kafka clusters.
-   - Each cluster has its resources, such as brokers, topics, etc.
-   - Each cluster has a unique **Cluster ID** within the environment.
+      - *Within an environment*, you can have one or more Kafka clusters.
+      - Each cluster has its resources, such as brokers, topics, etc.
+      - Each cluster has a unique **Cluster ID** within the environment.
 
 ### Accessing via CLI:
 
@@ -359,13 +367,13 @@ To access and manage resources within Confluent Cloud using the CLI, you often n
 Typically, the process involves:
 
 1. **Authentication**:
-   - You'll first authenticate your CLI with Confluent Cloud using your API key and secret.
+      - You'll first authenticate your CLI with Confluent Cloud using your API key and secret.
 
 2. **Setting the Environment**:
-   - Use the Environment ID to specify which environment you want to work within.
+      - Use the Environment ID to specify which environment you want to work within.
 
 3. **Accessing/Managing a Cluster**:
-   - Once inside an environment, use the Cluster ID to specify which cluster you want to interact with.
+      - Once inside an environment, use the Cluster ID to specify which cluster you want to interact with.
 
 ### Example:
 
@@ -399,3 +407,6 @@ Confluent Cloud
 ```
 
 When working with the Confluent CLI, you'd authenticate, select Environment 1 (using its ID), then select Cluster A (using its ID) to interact with topics or other resources within that cluster.
+
+
+
