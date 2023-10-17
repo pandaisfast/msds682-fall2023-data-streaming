@@ -136,16 +136,21 @@ nav:
   - "Lec 1: 10/20 F (Room 529)":
     - lec1/index.md
     - "Additional Topics": lec1/1.1.md
-    - "Demo": lec1/demo_or_exercise.md
-
+    - "Demo 1": lec1/demo_or_exercise.md
+    - "Assignment 1": lec1/assignment.md
+  
   - "Lec 2: 10/24 T (Room 529)":
     - lec2/index.md
     - "Additional Topics": lec2/2.1.md
-    - "Demo": lec2/demo_or_exercise.md
+    - "Demo 2A": lec2/demo_or_exercise.md
+    - "Demo 2B": lec2/demo_or_exercise_2.md
     
   - "Lec 3: 10/27 F (Room 529)":
     - lec3/index.md
     - "Additional Topics": lec3/3.1.md
+    - "Demo 3A": lec3/demo_or_exercise.md
+    - "Demo 3B": lec3/demo_or_exercise_2.md
+    - "Assignment 2": lec3/assignment.md
 
   - "Lec 4: 10/31 T (Room 529)":
     - lec4/index.md
