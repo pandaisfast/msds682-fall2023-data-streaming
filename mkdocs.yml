@@ -79,7 +79,8 @@ plugins:
         - ja
   - minify: # https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/minification/
       minify_html: true 
-  # - git-revision-date-localized # Revision date https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/revision-date/
+  # - git-revision-date-localized # Revision date https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/, https://henrywhitaker3.github.io/mkdocs-material-dark-theme/plugins/revision-date/
+  
   # slide/images
   - glightbox
   # support for adding the date of last update and creation of a document at the bottom of each page

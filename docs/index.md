@@ -9,7 +9,7 @@ Students will gain hands-on experience with Apache Kafka and other modern data e
 - Semester: Fall 2023
 - Graduate Course in Data Engineering Track
 - [Course Notes](https://pandaisfast.github.io/msds682-fall2023-data-streaming/): https://pandaisfast.github.io/msds682-fall2023-data-streaming/
-- [Canvas](https://usfca.instructure.com/courses/1617043): https://usfca.instructure.com/courses/1617043)
+- [Canvas](https://usfca.instructure.com/courses/1617043): https://usfca.instructure.com/courses/1617043
 - Additional Materials: From time to time, I'll be publishing supplementary resources and materials on Canvas. Please check periodically to ensure you have all the required content.
 - Homework Submission: Please submit all your homework assignments through **Canvas**. This ensures there's a central location for submission, and it's easier to keep track.
 - [Piazza](https://piazza.com/usfca/fall2023/msds682): Q/A & discussing lectures and assignments. https://piazza.com/usfca/fall2023/msds682
