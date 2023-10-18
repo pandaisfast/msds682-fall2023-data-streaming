@@ -8,13 +8,16 @@
 - **Take an iterative approach to learning.** Get the basics working first, and later dive into refinement, optimizations and customizations. 
 
 --- 
-We have three options of setting up Kafka clusters [(Official Confluent Platform reference)](https://docs.confluent.io/platform/6.2/overview.html). The first one with Confluent Cloud + CLI (python) will be used in our classroom. The Confluent Cloud path provides a fully managed service so you don't have to provision your own Kafka infrastructure. The local install and Docker approaches (Method #2 and #3) allow you to run Confluent Platform locally for development and testing. 
+We have three options of setting up Kafka clusters [(Official Confluent Platform reference)](https://docs.confluent.io/platform/6.2/overview.html). The first one with Confluent Cloud + Confluent CLI (python) will be used in our classroom. The Confluent Cloud path provides a fully managed service so you don't have to provision your own Kafka infrastructure. The local install and Docker approaches (Method #2 and #3) allow you to run Confluent Platform locally for development and testing. 
 
-- Method #1: Managed Confluent Cloud
-- Method #2: Local Docker install
-- Method #3: Local native install (not covered)
+- Method #1: Managed Confluent Cloud + CLI
+  
+    We have two options of **python client**: `confluent-kafka-python` and `kafka-python`. In Demo #2, we will cover both of them.
 
-### Method #1: Confluent Cloud + CLI
+- Method #2: Local Docker install (not covered in the course)
+- Method #3: Local native install (not covered in the course)
+
+### Method #1: Confluent Cloud + Confluent CLI
 
 #### Overview
 Confluent Cloud is a managed Kafka service provided by Confluent, the company behind some of the popular Kafka toolsets. The significant advantage of using Confluent Cloud is that you don't have to worry about the infrastructure or configuration of a Kafka cluster. Everything is managed, and you can focus entirely on your application and client development. This method is used in the classroom.

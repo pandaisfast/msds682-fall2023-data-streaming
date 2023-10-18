@@ -172,8 +172,8 @@ Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 - Lecture #13: Dec 01, 2023 (F) - San Francisco-101 Howard 529
 - Final Project Written Report and Code: Due by 11:59pm on 12/3/2023
 - Final Project Presentation Deck: Must be submitted before the final lecture 5:30pm on 12/5/2023
-- Lecture #14: Dec 05, 2023 (T) - San Francisco-101 Howard 157 (Tentative Room)
-  - Note: This lecture is allocated for the Final Project Presentation. Each student has a 10-minute presentation slot.
+- Lecture #14: Dec 05, 2023 (T) - San Francisco-101 Howard 157
+    - Note: This lecture is allocated for the Final Project Presentation. Each student has a about 12-minute presentation slot.
 
 ## Attendance Policy
 
