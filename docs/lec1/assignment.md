@@ -7,15 +7,13 @@ Prerequisite:
 - Demo in Lec 2 - Use Python Client with Confluent CLI
 - Functinos, objects, class, and other OOP knowlege in Python 3
 
-
 Account for 10pts 
 
 Due by 11:59pm on 10/28/2023
 
 Must be independent efforts. Group discussion is encouraged, but the code and answeres must be written on your own. 
 
-
-
+Please draw a diagram (e.g. Google Slide or Draw.io) to explain the relationship between Environment, Cluster, Topic, 
 
 
 
