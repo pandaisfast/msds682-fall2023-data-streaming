@@ -85,7 +85,10 @@ plugins:
   # support for adding the date of last update and creation of a document at the bottom of each page
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/?h=adding+a+git+repository#document-dates
   - git-revision-date-localized:
+      fallback_to_build_date: false
       enable_creation_date: true
+      type: timeago
+      timezone: America/Los_Angeles
 
 
 # markdown_extensions:
