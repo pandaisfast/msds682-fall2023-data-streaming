@@ -8,6 +8,13 @@ Students will gain hands-on experience with Apache Kafka and other modern data e
 
 - Semester: Fall 2023
 - Graduate Course in Data Engineering Track
+- [Course Notes](https://pandaisfast.github.io/msds682-fall2023-data-streaming/): https://pandaisfast.github.io/msds682-fall2023-data-streaming/
+- [Canvas](https://usfca.instructure.com/courses/1617043): https://usfca.instructure.com/courses/1617043)
+- Additional Materials: From time to time, I'll be publishing supplementary resources and materials on Canvas. Please check periodically to ensure you have all the required content.
+- Homework Submission: Please submit all your homework assignments through **Canvas**. This ensures there's a central location for submission, and it's easier to keep track.
+- [Piazza](https://piazza.com/usfca/fall2023/msds682): Q/A & discussing lectures and assignments. https://piazza.com/usfca/fall2023/msds682
+
+
 
 ### Instructor Inforomation 
 - Jeremy W. Gu
@@ -173,7 +180,7 @@ Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 - Final Project Written Report and Code: Due by 11:59pm on 12/3/2023
 - Final Project Presentation Deck: Must be submitted before the final lecture 5:30pm on 12/5/2023
 - Lecture #14: Dec 05, 2023 (T) - San Francisco-101 Howard 157
-    - Note: This lecture is allocated for the Final Project Presentation. Each student has a about 12-minute presentation slot.
+    - Note: This lecture is allocated for the Final Project Presentation. Each student has a about 10-minute presentation slot.
 
 ## Attendance Policy
 
@@ -182,5 +189,4 @@ Tentative Schedule (Each lecture: 5:30 - 7:20pm PST)
 - **Absence Due to Illness:** If you are unable to attend a lecture due to sickness or any other unavoidable circumstance, please notify me in advance. 
 - **No Distractions:** Mobile phones and other electronic devices should be kept silent and should not be used during class time. 
 
-## Lecture references
 
