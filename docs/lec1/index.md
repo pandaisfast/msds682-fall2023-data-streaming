@@ -30,7 +30,7 @@ Stream processing involves continuous calculations on constantly evolving data s
 
 - Example: GPS pings, Ads Clicks, purchases, sensor readings, etc.
 
-**Event data** is dynamic and ephemeral vs traditional databases that overwrite older data.
+**Event data** is dynamic, short-lived and not intended to be stored for a long duration, compared to traditional databases that overwrite older data.
 
 Event producers emit facts without targeting specific consumers, unlike messaging queues which often have designated receivers.
 
@@ -43,6 +43,30 @@ Event producers emit facts without targeting specific consumers, unlike messagin
 ## Stream Processing and Batch Processing
 
 In the realm of data engineering, batch and stream processing serve as two prominent paradigms. 
+
+```
+          +-----------------------------+
+          |                             |
+    +----->     Batch Processing        |
+    |     |                             |
+    |     +-----------------------------+
+    |     |   Dataset 1   |   Dataset 2   | ... |   Dataset N   |
+    |     +-----------------------------+---------------------+
+    |      
+    |      Time ------------------------->
+
+    |      +-----------------------------+
+    |      |                             |
+    +------>   Streaming Processing      |
+           |                             |
+           +-----------------------------+
+           | Event 1 | Event 2 | Event 3 | ... | Event N |
+           +-----------------------------+---------------------+
+          
+           Time ------------------------->
+
+
+```
 
 ### Comparison of Batch and Stream Processing
 
@@ -68,6 +92,25 @@ In the realm of data engineering, batch and stream processing serve as two promi
 
 **Note**: "Exactly-once semantics" means the system has mechanisms in place to ensure every piece of data is processed one time only.
 
+```
+Batch Processing:
+                                                                                     
++---------+    +----------+    +----------+    +---------+   +---------+
+| Raw     | -> | Extract  | -> | Transform| -> | Load    | ->| Database|
+| Data    |    | & Clean  |    | & Model  |    | Process |   |         |
++---------+    +----------+    +----------+    +---------+   +---------+
+              [Periodic intervals: e.g., daily, weekly]
+
+
+Streaming Processing:
+                                                                       
++---------+    +----------+     +--------+
+| Event   | -> | Real-time| ->  |Output  |
+| Stream  |    | Analysis |     |or DB   |
++---------+    +----------+     +--------+
+              [Continuous: events processed as they arrive]
+
+```
 ### General Notes
   - **Distinctions & Exceptions:** While we often categorize "batch processing" as periodic and "stream processing" as real-time, these are broad generalizations. In practice:
     - Some batch jobs may operate close to real-time.
@@ -81,6 +124,22 @@ In the realm of data engineering, batch and stream processing serve as two promi
 Two key components: Streaming data store and Streaming calculations.
 
 ### E-commerce Example
+
+
+```
++-------------------+          +------------------+          +---------------------+          +---------------------+
+| Customer places   |   --->   | System generates |   --->   | Processes the       |   --->   | Inform Warehouse &  |
+| an order          |          | an order ID      |          | payment             |          | Send Delivery Info  |
++-------------------+          +------------------+          +---------------------+          +---------------------+
+                                                                                        |
+                                                                                        v
+                                                                                +---------------+
+                                                                                | Notify User   |
+                                                                                +---------------+
+
+Outcome: Seamless integration of Kafka and stream processing applications for real-time e-commerce analytics.
+
+```
 
 When a customer places an order, the system of the e-commerce website will begin the tasks below:
 
@@ -110,27 +169,12 @@ The system creates an order, and the user receives a response that the order is 
 
 In summary, **Streaming Data** prioritizes immediacy. **Stored Data** prioritizes query-ability and depth. In many contexts, especially when distinguishing between "Stored" Data and Streaming data, it's generally implied that the data is stored in traditional, structured, and query-friendly systems, such as SQL-like databases.
 
-**Streaming Data (Real-time Data)**:
+| Parameter/Feature           | **Streaming Data (Real-time Data)**                                                                                                  | **Stored Data (SQL-like databases)**                                                                                                                                                                  |
+|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Purpose**                 | Primarily used for real-time analytics and responses.                                                                                                             | Used for long-term storage and in-depth analysis.                                                                                                                                                     |
+| **Typical Use Cases**       | - Analyzing user behaviors such as browsing, clicking, and purchasing in real-time.<br> - Making instantaneous decisions, e.g., adjusting product recommendations.   | - Product Details: Long-term storage of static info like product names, descriptions, categories, images, etc.<br> - Historical Pricing: Time series data storing price fluctuations for trend analysis.<br> - User Reviews: Long-term storage of feedback from customers.<br> - Order Information: Permanent record of each transaction's details. |
+| **Characteristics**         | - Emphasizes immediacy and real-time actions.<br> - Data might be transient or archived after being processed.                                                    | - Emphasizes query-ability and historical context.<br> - Data is persistently stored for future retrieval and analysis.                                                                                                                                          |
 
-- **Purpose**: Primarily used for real-time analytics and responses.
-- **Typical Use Cases**:
-  - Analyzing user behaviors such as browsing, clicking, and purchasing in real-time.
-  - Making instantaneous decisions, e.g., adjusting product recommendations.
-- **Characteristics**: 
-  - Emphasizes immediacy and real-time actions.
-  - Data might be transient or archived after being processed.
-
-**Stored Data (SQL-like databases)**:
-
-- **Purpose**: Used for long-term storage and in-depth analysis.
-- **Typical Use Cases**:
-  - **Product Details**: Long-term storage of static info like product names, descriptions, categories, images, etc.
-  - **Historical Pricing**: Time series data storing price fluctuations for trend analysis.
-  - **User Reviews**: Long-term storage of feedback from customers.
-  - **Order Information**: Permanent record of each transaction's details.
-- **Characteristics**: 
-  - Emphasizes query-ability and historical context.
-  - Data is persistently stored for future retrieval and analysis.
 
 **Typical Data Processing Workflow**:
 
@@ -142,10 +186,25 @@ In summary, **Streaming Data** prioritizes immediacy. **Stored Data** prioritize
 
 ### Course Coverage
 
+```
+    +------------------+
+    |    Kafka (MQ)    |
+    +------------------+
+               |
+               v
+    +--------------------------+
+    | Stream Processing Apps   |
+    +--------------------------+
+               |
+               v
+    +------------------------+
+    | Confluent KSQL & Faust  |
+    +------------------------+
+```
+
 **Streaming Data Store** : We will focus on using **Kafka** in the course. **Kafka** is a **message queue system** mainly used for processing and transporting real-time data streams. It is designed as a publish-subscribe system to ensure data can be consumed in real-time by multiple consumers.
 
 SQL stores like Cassandra will not be covered in our course. **Cassandra** is a **database** mainly used for long term data storage and querying. Although it supports stream data, its primary function is as a data storage system.
-
 
 
 **Stream Processing Framework** - A comprehensive set of tools and utilities, often bundled together as a library or a platform, which facilitates the creation and management of Stream Processing Applications. This framework offers components that handle various aspects of stream processing, such as data ingestion, real-time analytics, state management, and data output, allowing developers to focus on the specific business logic of their application. Here is a list of Common Stream Processing Application Frameworks, as follows:
@@ -164,7 +223,7 @@ SQL stores like Cassandra will not be covered in our course. **Cassandra** is a 
 
 
 
-## Other Examples of Using Data Streaming Services
+## Examples of Using Data Streaming Services
 
 **Shareride Requests**
 
