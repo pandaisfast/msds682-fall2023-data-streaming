@@ -38,7 +38,7 @@ Event producers emit facts without targeting specific consumers, unlike messagin
 
 !!! info
 
-    We will cover more on **message queues** and **invented systems** later on. Please refer to [Additional Topics](1.1.md#message-queues) for details. 
+    We will cover more on **message queues** in [Additional Topics](1.1.md#message-queues). 
 
 ## Stream Processing and Batch Processing
 
@@ -225,7 +225,7 @@ SQL stores like Cassandra will not be covered in our course. **Cassandra** is a 
 
 ## Examples of Using Data Streaming Services
 
-**Shareride Requests**
+### Shareride Requests
 
 - **Input data:** Continuous stream of location data from riders' smartphones using GPS, details about driver locations, and availability.
   
@@ -237,7 +237,100 @@ SQL stores like Cassandra will not be covered in our course. **Cassandra** is a 
 
 - **Streaming services:** Kafka for ingesting streams of rider requests and driver location updates; Spark Streaming for processing and assignment.
 
-**Fraud Detection in Payments**
+**Diagram and Example Data**
+
+```
++---------------------+
+| Rider's Smartphone  |
+|                     |
+|  - GPS Location     |
++----------+----------+
+           |
+           v
++----------+----------+
+| Kafka (Data Ingest) |
++----------+----------+
+           |
+           v
++----------+----------+
+| Spark Streaming App |
+|                     |
+|  - Haversine Calc.  |
+|  - Greedy Matching  |
++----------+----------+
+           |
+           v
++---------------------+
+|    Ride Dispatch    |
+|                     |
+|  - Matched Driver   |
++---------------------+
+```
+
+In this diagram:
+
+- The "Rider's Smartphone" is continuously sending GPS location data.
+- The data is ingested into the system using `Kafka`.
+- `Spark Streaming` processes this data in real-time. It uses the Haversine formula to calculate distances and a greedy algorithm to match riders to drivers.
+- The final result, a matched driver, is dispatched to the rider.
+
+Here's an example of how the JSON data might look for various components in the ride-sharing example:
+
+1. **Rider's Smartphone Data**:
+   - Represents the continuous stream of location data from a rider's smartphone.
+
+```json
+{
+  "rider_id": "12345",
+  "timestamp": "2023-10-18T14:00:00Z",
+  "location": {
+    "latitude": 40.730610,
+    "longitude": -73.935242
+  },
+  "ride_request": true
+}
+```
+
+2. **Driver Location and Availability Data**:
+   - Represents the details about driver locations and availability.
+
+```json
+{
+  "driver_id": "98765",
+  "timestamp": "2023-10-18T14:00:05Z",
+  "location": {
+    "latitude": 40.731000,
+    "longitude": -73.934500
+  },
+  "availability": true
+}
+```
+
+3. **Matched Ride Dispatch Data**:
+   - Represents the output after processing the above inputs.
+
+```json
+{
+  "ride_id": "67890",
+  "rider": {
+    "rider_id": "12345",
+    "location": {
+      "latitude": 40.730610,
+      "longitude": -73.935242
+    }
+  },
+  "driver": {
+    "driver_id": "98765",
+    "location": {
+      "latitude": 40.731000,
+      "longitude": -73.934500
+    }
+  },
+  "estimated_arrival_time": "2023-10-18T14:05:00Z"
+}
+```
+
+### Fraud Detection in Payments
 
 - **Input data:** Continuous stream of financial transaction data, which includes purchases, withdrawals, and deposits.
 
@@ -249,7 +342,86 @@ SQL stores like Cassandra will not be covered in our course. **Cassandra** is a 
 
 - **Streaming services:** Kafka for ingesting transactional data streams; Flink for real-time anomaly and pattern detection.
 
-**Package Delivery Tracking**
+**Diagram and Example Data**
+
+```
+  +----------------------+
+  | Financial Transaction|
+  |      Data Source     |
+  +----------------------+
+           |
+           v
+  +-------------------+
+  |  Kafka Stream     |
+  |    (Ingestion)    |
+  +-------------------+
+           |
+           v
+  +------------------+
+  | Stream Processing|
+  |   (Flink)        |
+  +------------------+
+           |
+           |
+  +--------v-------+
+  |Machine Learning|
+  |   Models (e.g. |
+  |Random Forest)  |
+  +----------------+
+           |
+           v
+  +----------------------+
+  | Real-time Fraud Alert|
+  |  & Feedback System   |
+  +----------------------+
+```
+The data flows from top to bottom:
+
+1. **Financial Transaction Data Source** is where all transactions originate.
+2. This data streams into a **Kafka Stream** for ingestion.
+3. **Stream Processing** (with Apache Flink here) consumes this data, processes it in real-time, and applies various algorithms/models to detect potential fraud.
+4. **Machine Learning Models**, like Random Forest, analyze patterns in the data to make predictions about potential fraud.
+5. Detected anomalies are sent to a **Real-time Fraud Alert & Feedback System**, which could involve notifying account holders, bank agents, or flagging transactions for review.
+
+Now, let's represent potential JSON data for this use case:
+
+**Financial Transaction Data**:
+   - Represents a single financial transaction event, such as a purchase.
+
+```json
+{
+  "transaction_id": "abcd1234",
+  "timestamp": "2023-10-18T14:10:00Z",
+  "account_id": "A78901",
+  "transaction_type": "purchase",
+  "amount": 500.00,
+  "currency": "USD",
+  "merchant": {
+    "name": "ElectronicsStore",
+    "category": "Electronics",
+    "location": {
+      "latitude": 40.730610,
+      "longitude": -73.935242
+    }
+  }
+}
+```
+
+**Fraud Alert Data**:
+   - Represents the output data after processing the transaction data.
+
+```json
+{
+  "alert_id": "alert5678",
+  "timestamp": "2023-10-18T14:10:05Z",
+  "transaction_id": "abcd1234",
+  "account_id": "A78901",
+  "reason": "Unusual high amount",
+  "action": "Flagged for review"
+}
+```
+
+### Package Delivery Tracking
 
 - **Input data:** Continuous GPS pings from delivery drivers' smartphones; shipment status updates.
 
@@ -261,7 +433,153 @@ SQL stores like Cassandra will not be covered in our course. **Cassandra** is a 
 
 - **Streaming services:** Kafka to ingest streams of GPS data and delivery updates; Spark Streaming for route analysis and optimization.
 
-**Other Considerations**:
+**Diagram and Example Data**
+
+```
+  +----------------------+
+  | Package & GPS Data   |
+  |     Data Source      |
+  +----------------------+
+           |
+           v
+  +-------------------+
+  |  Kafka Stream     |
+  |    (Ingestion)    |
+  +-------------------+
+           |
+           v
+  +--------------------+
+  | Stream Processing  |
+  |   (Spark Streaming)|
+  +--------------------+
+           |
+           v
+  +------------------+
+  |Rules-based Status|
+  |   Inference      |
+  +------------------+
+           |
+           v
+  +---------------------+
+  |Route Optimization   |
+  | Algorithms          |
+  +---------------------+
+           |
+           v
+  +----------------------+
+  |Real-time Package     |
+  |Status & ETA Updates  |
+  +----------------------+
+```
+
+Here's the data flow:
+
+1. **Package & GPS Data Source**: This is where the raw data (like GPS pings and shipment statuses) originates from the delivery drivers' devices.
+2. This data then flows into a **Kafka Stream** for ingestion.
+3. **Stream Processing** (using Spark Streaming in this case) takes this data and applies basic processing.
+4. **Rules-based Status Inference** analyses the processed data to infer the delivery status based on the GPS data.
+5. **Route Optimization Algorithms** take this inferred data, consider other variables (like traffic), and optimize the delivery routes.
+6. The results from the above process are then sent to a system that provides **Real-time Package Status & ETA Updates** to the recipients or the main server.
+
+Here are some potential JSON data structures:
+
+1. **Package & GPS Data Source**:
+```json
+{
+  "driver_id": "D12345",
+  "timestamp": "2023-10-18T14:30:45Z",
+  "gps_coordinates": {
+    "latitude": 40.730610,
+    "longitude": -73.935242
+  },
+  "shipment_status": "in_transit",
+  "package_id": "PKG78910"
+}
+```
+
+2. **Kafka Stream (Ingestion)**:
+(This would look the same as the input data as Kafka is just ingesting the data.)
+```json
+{
+  "driver_id": "D12345",
+  "timestamp": "2023-10-18T14:30:45Z",
+  "gps_coordinates": {
+    "latitude": 40.730610,
+    "longitude": -73.935242
+  },
+  "shipment_status": "in_transit",
+  "package_id": "PKG78910"
+}
+```
+
+3. **Stream Processing (Spark Streaming)**:
+(The processed data might include more details, such as current speed or next destination.)
+```json
+{
+  "driver_id": "D12345",
+  "timestamp": "2023-10-18T14:30:45Z",
+  "gps_coordinates": {
+    "latitude": 40.730610,
+    "longitude": -73.935242
+  },
+  "current_speed": "35 mph",
+  "next_destination": {
+    "latitude": 40.741895,
+    "longitude": -73.989308
+  },
+  "shipment_status": "in_transit",
+  "package_id": "PKG78910"
+}
+```
+
+4. **Rules-based Status Inference**:
+(This step infers the status based on the processed data, e.g., whether a driver has reached the destination.)
+```json
+{
+  "driver_id": "D12345",
+  "timestamp": "2023-10-18T14:35:00Z",
+  "package_id": "PKG78910",
+  "inferred_status": "delivered"
+}
+```
+
+5. **Route Optimization Algorithms**:
+(This data structure might focus on optimal route details.)
+```json
+{
+  "driver_id": "D12345",
+  "current_location": {
+    "latitude": 40.730610,
+    "longitude": -73.935242
+  },
+  "optimal_route": [
+    {
+      "latitude": 40.741895,
+      "longitude": -73.989308
+    },
+    {
+      "latitude": 40.752880,
+      "longitude": -73.977326
+    }
+  ],
+  "estimated_arrival": "2023-10-18T15:10:00Z"
+}
+```
+
+6. **Real-time Package Status & ETA Updates**:
+(This is the final data that would be sent to end-users.)
+```json
+{
+  "package_id": "PKG78910",
+  "current_status": "delivered",
+  "driver_id": "D12345",
+  "estimated_arrival": "2023-10-18T15:10:00Z"
+}
+```
+
+Note: The timestamps and coordinates provided in these examples are arbitrary and are for illustrative purposes only. Actual data will vary based on real-world inputs.
+
+### Other Considerations
 
 - **Trade-offs**: Every streaming solution has to deal with the balance between latency (how fast data is processed) and throughput (how much data can be processed in a time frame). There's also accuracy, especially in ML where a faster prediction may be less accurate.
 
@@ -349,4 +667,3 @@ Explanation: Stream processing continually performs calculations on live, updati
 B) Strictly ordered arrival patterns
 
 Explanation: Irregular and uneven arrival patterns are a characteristic of streaming data. Strictly ordered patterns are not typical as streams can have bursts and lulls.
-
