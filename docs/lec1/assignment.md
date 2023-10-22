@@ -8,9 +8,9 @@
 
 **Pre-requisites:**
 
-- Completion of Demo #1
-- Understanding Coding Examples in Lec 2. 
-- Creation of a Confluent Cloud account using your USF Gmail account (preferred).
+    - Completion of Demo #1
+    - Understanding Coding Examples in Lec 2. 
+    - Creation of a Confluent Cloud account using your USF Gmail account (preferred).
 
 ---
 
