@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/ReadMe/</loc>
+         <lastmod>2023-10-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/course_project/project_examples/</loc>
          <lastmod>2023-10-22</lastmod>
          <changefreq>daily</changefreq>
