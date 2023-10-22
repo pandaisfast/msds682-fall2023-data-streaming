@@ -98,6 +98,16 @@ C. `{"message": "Hello World", "recipient": "user123"}`
     Explanation: Option B represents a change in state, capturing an "event" of the volume level changing, which aligns well with the event-driven paradigm. Option A seems more like a command or directive, while Option C is a generic message with no clear event or state change described.
 
 
+
+## Examples of Managing Topics 
+
+(Please read Lecture 2 PPT)
+
+## Examples of Writing Producers 
+
+(Please read Lecture 2 PPT)
+
+
 ---
 
 ## Example: Uber's Big Data Stack
