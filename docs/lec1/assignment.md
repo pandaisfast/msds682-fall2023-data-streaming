@@ -4,7 +4,7 @@
 
 **Scoring:** Maximum of 10 points. Even with extra credits, the total score will not exceed 10 points.
 
-**HW Submission: [Canvas](https://usfca.instructure.com/courses/1617043/assignments/7365180)
+**HW Submission:** [Canvas](https://usfca.instructure.com/courses/1617043/assignments/7365180)
 
 **Pre-requisites:**
 
