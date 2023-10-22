@@ -35,23 +35,32 @@ You will set up your cluster in the Confluent Cloud, use both asynchronous and s
     ```
 
 2. **Producer Implementation:**
+   
     a. Create an asynchronous producer. You may design your own or reuse the example provided in the class.
+
     b. Similarly, develop a synchronous producer.
 
 3. **Performance Benchmarking:**
+
     a. For the testing phase, set `num_messages = 20,000` or larger number.
-    b. For both types of producers, track the time taken to send batches of 500 messages. The `time` module in Python will be useful for this task.
+
+    b. For both types of producers, track the time taken to send batches of `500` messages. The `time` module in Python will be useful for this task.
+
     c. Store the elapsed time for each batch in a suitable data structure of your choice.
 
 4. **Analysis:**
+
     a. Visualize the elapsed time data using a graph (possible tools: `matplotlib` or `seaborn`). The graph should provide insights into the performance variation of the two producers over each batch.
+
     b. Write an analysis (minimum 150 words) elucidating:
         - The faster producer among the two.
         - Possible reasons for the observed performance differences.
         - Advantages and disadvantages of each producer type.
 
 5. **Deliverables:**
+
     a. **An organized Python Notebook** (`.ipynb`) encapsulating all your code, visualizations, and concise written analysis.
+
     b. Ensure your code is **well-commented**, adhering to best practices, and is easy for coworkers to follow.
 
 **Grading Breakdown:**
@@ -101,4 +110,4 @@ Review and understand the provided [Kafka producer code](https://developer.confl
 
 **Deliverables:**
 
-Please submit your solutions in a file named "assignment1_{your name}". This can be in raw markdown (.md) or text (.txt) format. Ensure your document does not have excessive formatting, as this may distract from the content of your answers.
+Please submit your solutions in a file named `assignment1_{your name}`. This can be in raw markdown (.md) or text (.txt) format. Ensure your document does not have excessive formatting, as this may distract from the content of your answers.
