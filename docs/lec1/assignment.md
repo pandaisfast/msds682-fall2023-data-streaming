@@ -61,9 +61,10 @@ You will set up your cluster in the Confluent Cloud, use both asynchronous and s
 - Extra credit  when you're using your own data schema with dataclass (+1pt) and seriealization (+1pt).
 
 **Notes:** 
-- Always back up your code and results.
-- Stop the Confluent Cluster if you're not using it. (Save $$)
-- Collaboration is encouraged, but direct copying is not. Always cite your sources and collaborators.
+
+  - Always back up your code and results.
+  - Stop the Confluent Cluster if you're not using it. (Save $$)
+  - Discussion is encouraged, but direct copying is not. Always cite your sources.
 
 --- 
 
