@@ -2,9 +2,10 @@
 
 **Due Date:** 10/28/2023 by 11:59pm
 
-**Scoring:** 10pts plus extra credits
+**Scoring:** Maximum of 10 points. Even with extra credits, the total score will not exceed 10 points.
 
 **Pre-requisites:**
+
 - Completion of Demo #1
 - Understanding Coding Examples in Lec 2. 
 - Creation of a Confluent Cloud account using your USF Gmail account (preferred).
