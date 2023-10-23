@@ -16,17 +16,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/ReadMe/</loc>
-         <lastmod>2023-10-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/demo_a_creating_topic/</loc>
          <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/demo_b_producer_async/</loc>
+         <lastmod>2023-10-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/demo_b_producer_serialization/</loc>
          <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
