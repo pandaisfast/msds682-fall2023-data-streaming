@@ -53,6 +53,7 @@ You will set up your cluster in the Confluent Cloud, use both asynchronous and s
     a. Visualize the elapsed time data using a graph (possible tools: `matplotlib` or `seaborn`). The graph should provide insights into the performance variation of the two producers over each batch.
 
     b. Write an analysis (minimum 150 words) elucidating:
+
         - The faster producer among the two.
         - Possible reasons for the observed performance differences.
         - Advantages and disadvantages of each producer type.

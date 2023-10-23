@@ -151,6 +151,7 @@ nav:
     - Notebook - Create Topics: assets/msds-lec2-topic-producer/demo_a_creating_topic.ipynb
     - "Notebook - Async Producer": assets/msds-lec2-topic-producer/demo_b_producer_async.ipynb
     - "Notebook - Compare Sync vs Async": assets/msds-lec2-topic-producer/demo_c_producer_compare.ipynb
+    - "Notebook - Async Producer w/ Serialization": assets/msds-lec2-topic-producer/demo_b_producer_serialization.ipynb
     - "Demo 2A": lec2/demo_or_exercise.md
     - "Demo 2B": lec2/demo_or_exercise_2.md
     

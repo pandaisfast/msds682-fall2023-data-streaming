@@ -108,7 +108,6 @@ C. `{"message": "Hello World", "recipient": "user123"}`
 
 (Please read Lecture 2 PPT)
 
-
 ### Asynchronous Producer and Synchronous Producer
 
 Below is a table that summarizes the use of `flush()`, `poll()`, and other methods for both asynchronous and synchronous Kafka producers:
