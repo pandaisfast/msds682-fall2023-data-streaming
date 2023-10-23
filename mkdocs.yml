@@ -90,7 +90,9 @@ plugins:
       enable_creation_date: true
       type: timeago
       timezone: America/Los_Angeles
-
+  # show jupyter https://github.com/danielfrg/mkdocs-jupyter
+  - mkdocs-jupyter:
+    # include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
 
 # markdown_extensions:
   # TOC
@@ -146,6 +148,9 @@ nav:
   - "Lec 2: 10/24 T (Room 529)":
     - lec2/index.md
     - "Additional Topics": lec2/2.1.md
+    - Notebook - Create Topics: assets/msds-lec2-topic-producer/demo_a_creating_topic.ipynb
+    - "Notebook - Async Producer": assets/msds-lec2-topic-producer/demo_b_producer_async.ipynb
+    - "Notebook - Compare Sync vs Async": assets/msds-lec2-topic-producer/demo_c_producer_compare.ipynb
     - "Demo 2A": lec2/demo_or_exercise.md
     - "Demo 2B": lec2/demo_or_exercise_2.md
     

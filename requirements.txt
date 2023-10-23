@@ -1,7 +1,7 @@
 mkdocs==1.5.3
 mkdocs-material==9.4.2
 mkdocs-minify-plugin
-
+mkdocs-jupyter
 jinja2
 mkdocs-static-i18n
 mkdocs-i18n

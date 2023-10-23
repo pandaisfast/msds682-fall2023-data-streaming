@@ -1,4 +1,4 @@
-# Lecture 2. Apache Kafka (Part 1.)
+# Lecture 2. Apache Kafka Part 1. Basics and Producers
 
 (Working In Progress)
 
@@ -14,7 +14,7 @@ For this course, we'll be working with the latest Kafka version `3.6`. We encour
 
 - **Kafka Official Documentation** (Version: Kafka 3.6) at https://kafka.apache.org/documentation/. **Credits:** Any text in *italics* throughout this document is sourced directly from the Kafka Official Documentation.
 
-**I. Introduction to Apache Kafka**
+### Introduction to Apache Kafka
 
 - **Definition:** Apache Kafka is an event streaming platform engineered for real-time collection, processing, storage, and data integration.
 - **Officiial Explanation:** From https://kafka.apache.org/, *Kafka combines **three key capabilities** so you can implement your use cases for event streaming end-to-end with a single battle-tested solution:*
@@ -23,7 +23,7 @@ For this course, we'll be working with the latest Kafka version `3.6`. We encour
     - *To **store streams** of events durably and reliably for as long as you want.*
     - *To **process streams** of events as they occur or retrospectively*.
 
-**II. Kafka as a Stream Processing Powerhouse**
+### Kafka as a Stream Processing Powerhouse
 
 - **Popularity:** Kafka reigns supreme as a leading streaming data platform in the industry, trusted and adopted widely.
 
@@ -49,7 +49,7 @@ Event timestamp: "Jun. 25, 2020 at 2:06 p.m."
 
 - **Ecosystem Synergy:** Kafka seamlessly integrates with renowned streaming tools like Apache Spark, Flink, and Samza, broadening its capabilities.
 
-**III. Main Concepts and Terminology**
+### Main Concepts and Terminology
 
 - **What is an Event?** *An event records the fact that "something happened"*.
 
@@ -70,7 +70,7 @@ Event timestamp: "Jun. 25, 2020 at 2:06 p.m."
 
 - **Sink:** Refers to the destination or endpoint where data is sent to or consumed. In Kafka, a sink would be the consumer or another data store where Kafka data is written. In the Kafka ecosystem, particularly with Kafka Connect, sinks are often connectors that stream data from Kafka to another system, such as a database, search index, or another type of data store.
 
-**IV. A Peek into Kafka's Legacy**
+### A Peek into Kafka's Legacy
 
 - **Birth at LinkedIn:** Kafka was conceived at LinkedIn to cater to their internal streaming requisites. Now, as an Apache Foundation jewel, its adoption and growth are unparalleled.
   
@@ -97,92 +97,155 @@ C. `{"message": "Hello World", "recipient": "user123"}`
 
     Explanation: Option B represents a change in state, capturing an "event" of the volume level changing, which aligns well with the event-driven paradigm. Option A seems more like a command or directive, while Option C is a generic message with no clear event or state change described.
 
-
-
-## Examples of Managing Topics 
+### Examples of Managing Topics 
 
 (Please read Lecture 2 PPT)
 
-## Examples of Writing Producers 
+
+## Producers 
+
+### Examples of Writing Producers 
 
 (Please read Lecture 2 PPT)
+
+
+### Asynchronous Producer and Synchronous Producer
+
+Below is a table that summarizes the use of `flush()`, `poll()`, and other methods for both asynchronous and synchronous Kafka producers:
+
+| **Method/Action** | **Asynchronous Producer** | **Synchronous Producer** |
+|--------------------|---------------------------|--------------------------|
+| **flush()**       | **Used (After all messages)** - Called once after the loop has produced all messages to ensure that all of them have been delivered. It waits up to the given timeout for the delivery report callbacks to be triggered. | **Used (After each message)** - Called within the loop, after each `produce()`, to ensure that the current message is delivered and acknowledged before sending the next one. |
+| **poll()**        | **Used** - Can be used within the loop or after it, primarily to trigger the delivery report callback and get feedback about the delivery status of messages. If used after the loop (as in the provided example), it will process delivery reports for all previously sent messages.| *Optional* - Not typically required in a purely synchronous producer since `flush()` waits for message acknowledgment. However, if you wanted feedback about delivery status after each message, you could use it. |
+| **callback**      | **Used** - Callback functions (like `delivery_report`) are used to handle delivery reports asynchronously. They provide feedback about the delivery status of each message. | *Optional* - While callbacks can be used in synchronous producers, they're not as essential since you're relying on `flush()` to wait for acknowledgment. However, callbacks can provide more detailed information about the delivery. |
+
+Remember that in real-world scenarios, you might find hybrid approaches based on the exact requirements of your application. The above distinctions are generalized to help you understand the conceptual differences between the two types of producers.
+
+### Producer Congiuration
+
+| Configuration         | Default Value  | Recommended Value | Description                                                                                              |
+|-----------------------|---------------|---------------------|-------------------------------------------------------------------------------------------------------|
+| `client.id`               | (none)           | (unique value)        | Identifier for the client in the Kafka cluster. Useful for tracking and debugging.                           |
+| `retries`                   | 2147483647   | (depends on use case) | The number of retry attempts. A high default ensures durability but can be adjusted based on use case.       |
+| `enable.idempotence` | false           | true                     | Ensures that messages are delivered exactly once by allowing retries without duplication.                       |
+| `acks`                      | all or -1                 | all or -1            | The number of acknowledgments the producer requires the broker to receive before considering a message sent.    |
+| `compression.type`     | none           | (depends on use case) | Type of compression to use (`none`, `gzip`, `snappy`, `lz4`, `zstd`). Chosen based on data and performance needs. |
+
+[Source of Truth](https://github.com/confluentinc/librdkafka/blob/master/CONFIGURATION.md) is from the confluent github repo: https://github.com/confluentinc/librdkafka/blob/master/CONFIGURATION.md.
+
+
+Based on [Apache Kafka Message Compression](https://www.confluent.io/blog/apache-kafka-message-compression/) published on 9/18/2023, here are the relevant passages that pertain to the topic-level compression and its precedence:
+
+1. **Topic-Level Compression Precedence**:
+   > "Typically, it works in the following manner when the producer is responsible for compression, and the topic’s compression.type is producer."
+   
+2. **Mismatch in Compression Settings**:
+   > "Brokers always perform some amount of batch decompression in order to validate data."
+   > "The following scenarios always require full payload decompression:
+     The producer compresses batches (i.e., compression.type isn’t none), and the topic-level compression.type specifies a different codec or is uncompressed."
+     
+
+#### Choice of Compression Types
+
+When decompression speed is critical, the following compression algorithms are commonly recommended in Kafka and other systems:
+
+1. **Snappy**: Developed by Google, Snappy prioritizes speed over compression ratio. It doesn't compress as tightly as some other algorithms, but it decompresses very quickly.
+
+2. **LZ4**: This is another compression algorithm that's designed for fast decompression speeds. In many benchmarks, LZ4 has been shown to be faster than Snappy, both in terms of compression and decompression, but with a slightly better compression ratio than Snappy.
+
+Between the two, LZ4 is often **recommended** in Kafka for performance reasons, but the best choice can vary depending on the specific nature of the data and the requirements of the use case. Always consider benchmarking with your actual data to determine which one meets your needs best.
+
+When network overhead is critical, meaning you want to minimize the amount of data sent over the network, you should opt for compression algorithms that provide the highest compression ratios, even if they are slower in terms of compression and decompression speed. Here are the common choices:
+
+1. **gzip**: This is a widely-used compression algorithm that typically provides a good balance between compression ratio and speed. While it's not the fastest in terms of compression or decompression, it usually achieves smaller compressed sizes compared to faster algorithms like Snappy or LZ4.
+
+2. **zstd (Zstandard)**: Developed by Facebook, zstd offers compression ratios comparable to gzip but at much faster speeds, especially in its higher compression levels. This makes zstd a great choice for scenarios where both network bandwidth and speed are concerns.
+
+For maximum reduction in network overhead, you might lean toward gzip or zstd. zstd is often **recommended** over gzip due to its better speed while maintaining a similar, if not better, compression ratio. As always, it's beneficial to benchmark different algorithms with your actual data to determine the best fit for your specific needs.
+
+#### client.id
+
+The `client.id` is a configuration setting for Kafka clients (both producers and consumers). It's an identifier for the client in the Kafka cluster. This ID is used in logs, metrics, and for debugging purposes to identify the source of requests to the broker.
+
+Having a unique `client.id` for each client allows administrators and developers to track requests, observe behavior, and troubleshoot issues more effectively because they can see which client is making which requests.
+
+**Simple Example**:
+Let's say you have a system with multiple Kafka producers, one that sends user activity data and another that sends system metrics. You can assign unique client IDs to each of them:
+
+- For the producer that sends user activity data: `client.id=user-activity-producer`
+- For the producer that sends system metrics: `client.id=system-metrics-producer`
+
+Now, when you look at the logs or metrics from the Kafka broker, you can quickly identify which client (producer) is the source of a particular request or potential issue just by checking the `client.id`. This is especially helpful in environments with many clients interacting with a Kafka cluster.
+
+#### Idempotence
+
+When retries are enabled, enabling idempotence ensures messages remain in their intended order. For example, if messages A, B, and C are sent, but B fails initially while C succeeds, retries without idempotence might lead to an A, C, B order. With idempotence, the order A, B, C is preserved.
+
+
+### Producer - Batch
+
+A "batch" itself is a group of messages. 
+
+1. **Batching Messages**: Kafka client libraries (producers) don't necessarily send every message individually. Instead, they batch multiple messages together into a single batch for efficiency reasons. This helps in reducing the overhead of network and I/O operations for each message, thus increasing throughput.
+
+2. **Batches**: The term "batch" in Kafka's context refers to a collection of messages that are sent together in one go to a Kafka broker. Batching is a technique to improve application and network performance.
+
+3. **Customizability**: The way messages are batched and sent — such as the size of the batch (`batch.size`), the time the producer waits before sending the batch (`linger.ms`), and the maximum size of a request (`max.request.size`) — are all customizable using producer configurations.
+
+
+The belief that the Kafka producer sends messages one by one is incorrect. Here's why:
+
+- **Batching**: The Kafka producer, including the Python client, doesn't send messages individually. Instead, it groups messages and sends them in batches for efficiency.
+  
+- **Configurable Settings**: The conditions for batching, like message count or elapsed time, are adjustable, allowing for performance tuning.
+  
+- **Compression**: Kafka can compress these batches, reducing bandwidth usage more effectively than compressing individual messages.
+  
+- **Optimized I/O**: Batching reduces the number of I/O operations, improving network and disk efficiency.
+
+
+In the diagram below, each "Message" represents an individual message produced and ready to be sent. "[ Batch 1 ]" and "[ Batch 2 ]" represent groups of messages that the producer batches together based on certain conditions (like reaching a specific message count, size, or time limit). "Send Batch" represents the action of sending a batch of messages from the producer to the broker.
+
+```
+Producer                                        Broker
+   |                                              |
+   |---- Message 1 ----                           |
+   |---- Message 2 ----                           |
+   |---- Message 3 ----                           |
+   |---- Message 4 ----                           |
+   |                                              |
+   |                                              |
+   | Factors for batching:                        |
+   |   - Count (e.g., 4 messages)                 |
+   |   - Time (e.g., 500ms elapsed)               |
+   |   - Size (e.g., nearing 1 GB)                |
+   |                                              |
+   |----[ Batch 1 ]---->|------ Send Batch ------>|
+   |                    |                         |
+   |---- Message 5 ----                           |
+   |---- Message 6 ----                           |
+   |                                              |
+   |----[ Batch 2 ]---->|------ Send Batch ------>|
+   |                                              |
+```
+
+
+**Performance Considerations**: 1) Throughput and 2) Overhead
+
+- Batching is largely for performance reasons.
+- In high-throughput applications, sending each message individually would result in significant network overhead.
+
+Here is the **trade-off**: By waiting to accumulate messages, you can send fewer, larger batches, which can improve throughput. However, this could introduce a slight delay in individual message delivery times
+
+Official Confluent Documentation:
+https://docs.confluent.io/platform/current/installation/configuration/producer-configs.html
+
+Batch Processing for Efficiency:
+https://docs.confluent.io/kafka/design/efficient-design.html
+
+Tutorial: How to optimize your Kafka producer for throughput:
+https://developer.confluent.io/tutorials/optimize-producer-throughput/confluent.html
+
 
 
 ---
-
-## Example: Uber's Big Data Stack
-
-<div class="result" markdown>
-
-![Web_2](<../assets/index/uber big data Figure-1-5.png>){align=left width=600}
-<div style="clear:both;"></div>
-</div>
-
-We have walked through basics of Kafka ecosystem. Next, I'd love to introduce an example of how to read industry engineering blogs that cover big data streaming systems. In the diagram above (Uber Eng Blog source[^1]), Uber leverages a diverse set of tools and technologies to manage its vast amount of data. This stack allows Uber to efficiently process, analyze, and act upon data generated from various sources like Rider App, Driver App, and other services. The diagram  illustrates the "Big Data Stack" used by Uber. The arrows between these components signify the flow of data and the relationships between various systems in the stack. Overall, the diagram provides a comprehensive view of how Uber might process, store, and analyze its big data. Let's break it down:
-
-[^1]: Real-Time Exactly-Once Ad Event Processing with Apache Flink, Kafka, and Pinot (9/2021). https://www.uber.com/blog/presto-on-apache-kafka-at-uber-scale/. Note that Marmaray is an open source data ingestion and dispersal framework developed by Uber's Hadoop Platform team to move data into and out of their Hadoop data lake.
-
-- **Sources**: At the leftmost part of the diagram, there are sources of data such as the "Rider App", "Driver App", "API/Services", and others. These represent the various applications and services from where data originates.
-     - **Rider App**: Primarily for passengers, it collects data such as user locations, destinations, payment methods, and order histories.
-     - **Driver App**: Tailored for drivers, it captures data points like driver locations, driving routes, order information, and income details.
-
-- **Databases**: Beneath the source, you'll find different databases like "Cassandra", "Schemaless", and "MySQL". These are databases where Uber's raw data might be stored.
-
-- **Ingestion**: The center of the diagram features an "Ingestion" process. This process is responsible for taking in data from the sources and feeding it into the big data systems. The systems involved in the ingestion process are:
-  
-    - **Kafka**: A real-time data streaming platform.
-    - **Hadoop**: A distributed storage and processing framework.
-    - **Amazon S3**: A cloud storage solution by Amazon.
-
-- **Data Processing and Analytics**:
-
-    - **Flink**: A stream-processing framework.
-    - **Presto**: A distributed SQL query engine.
-    - **Pinot**: A real-time distributed OLAP datastore.
-    - **ELK**: Refers to the Elastic Stack, consisting of Elasticsearch, Logstash, and Kibana, used for searching, analyzing, and visualizing data in real-time.
-     - **Spark**: A distributed data processing framework. Jobs, written using Spark's API, are divided into tasks and executed across cluster nodes. Its in-memory computing capability ensures rapid data processing.
-     - **Hive**: Used for analytics reporting, it helps extract statistical data about orders, revenues, and user behaviors.
-
-- **End Applications**: On the rightmost side, the diagram lists the potential applications or services that utilize the processed data. These include "Micro-Services", "Mobile App", "Streaming Analytics, Processing", "Machine Learning", "ETL, Applications Data Science", "Ad-hoc Exploration", "Analytics Reporting", and "Debugging".
-
-
-<div class="result" markdown>
-
-![Web_2](<../assets/index/uber Figure-2-2.png>){align=left width=600}
-<div style="clear:both;"></div>
-</div>
-
-
-The subsequent diagram emphasizes Kafka's central role within Uber's tech stack. It facilitates numerous workflows, such as channeling event data from the Rider and Driver apps as a pub-sub message system, streaming analytics via Apache Flink, streaming database logs to downstream recipients, and ingesting assorted data streams into Uber's Apache Hadoop data lake. Considerable attention has been given to enhancing Kafka's efficiency, reliability, and user experience.
-
-**Producers**:
-
-- **Rider APP**: The application used by riders to book rides. It generates events like booking a ride, ride cancellations, rating a driver, etc. These events are produced and sent to Kafka clusters.
-  
-- **Driver APP**: The application used by drivers. It produces events like accepting a booking, starting a ride, ending a ride, and other driver-related activities. These events are subsequently channeled to Kafka clusters.
-  
-- **API/SERVICES**: Backend services or APIs produce events or logs. This could be any interaction with the system, error logs, or any backend process that needs to be logged or analyzed.
-
-**Kafka Clusters**: The above apps and services generate event data that is produced/sent to the Kafka clusters.  The Kafka clusters sit at the core, tasked with receiving data from diverse producers and channeling this data to numerous consumers.
-
-**Consumers**: 
-
-- **Flink**: Apache Flink consumes events from Kafka for real-time stream processing. For instance, it might analyze real-time ride data for surge pricing decisions or traffic patterns.
-
-- **Hadoop**: A big data storage and processing framework, it consumes data for long-term storage and batch processing. The data consumed here might be used for trend analysis or financial reporting. Note: Flink for real-time stream processing; Hadoop for batch processing and storage.
-
-- **Apache Hive**: Operating over Hadoop, Hive consumes data to run SQL-like queries for data analysis.
-
-- **Real-time Analytics, Alerts, Dashboards**: Systems that provide real-time insights, alerts, and visualization dashboards will consume the relevant data streams from Kafka.
-
-- **Debugging**: Any system or tool used to monitor and debug issues will consume error logs or event data from Kafka.
-
-- **Applications Data Science**: Data science applications that might be building models or running experiments will consume data from Kafka for their analytics and training needs.
-
-- **Ad-hoc Exploration**: Any tool or system that needs to run exploratory analysis will consume the required datasets from Kafka.
-
-- **Analytics Reporting**: Systems designed to report and visualize data will be consuming the processed or raw data from Kafka.
-
-- **ELK (Elasticsearch, Logstash, Kibana)**: The ELK stack consumes log data for analytics and visualization. It helps in monitoring and troubleshooting.
-
---- 
