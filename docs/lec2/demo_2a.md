@@ -2,13 +2,15 @@
 
 Author: Jeremy Gu
 
-## Overview
+
 
 **Demo Objective**:
 
 - Learn to use python client  `confluent-kafka-python`
 - We have introduced Producer and walked through Producer's python implementation. Now let's get a sense of how a Consumer works. 
   
+
+## Overview
 
 In Demo #1, we have explored Confluent Cloud and Confluent CLI. You might be thinking, **"Where does Python fit into all of this?"** By the end of this demo, the student should be able to consume messages in a topic with Python client. For this demo, you'll be utilizing `confluent-kafka-python`, the Apache Kafka Python Client developed by Confluent. This client allows us to interface with Kafka using Python, enabling a more programmatic way to produce and consume events.
 
@@ -223,4 +225,3 @@ To better understand:
 - **earliest**: Useful for scenarios like reprocessing, data migration, or cluster migration where replaying data is essential.
 - **latest**: Ideal for stateless applications or situations where only the latest data is of interest.
 - **none**: Best suited for strict processing needs where starting without a valid offset is not acceptable.
-
