@@ -92,7 +92,8 @@ plugins:
       timezone: America/Los_Angeles
   # show jupyter https://github.com/danielfrg/mkdocs-jupyter
   - mkdocs-jupyter:
-    # include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+        include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+        ignore: ["some-irrelevant-files/*.ipynb"]
 
 # markdown_extensions:
   # TOC
@@ -152,8 +153,8 @@ nav:
     - "Notebook - Async Producer": assets/msds-lec2-topic-producer/demo_b_producer_async.ipynb
     - "Notebook - Compare Sync vs Async": assets/msds-lec2-topic-producer/demo_c_producer_compare.ipynb
     - "Notebook - Async Producer w/ Serialization": assets/msds-lec2-topic-producer/demo_b_producer_serialization.ipynb
-    - "Demo 2A": lec2/demo_or_exercise.md
-    - "Demo 2B": lec2/demo_or_exercise_2.md
+    - "Demo 2A": lec2/demo_2a.md
+    - "Demo 2B": lec2/demo_2b.md
     
   - "Lec 3: 10/27 F (Room 529)":
     - lec3/index.md
