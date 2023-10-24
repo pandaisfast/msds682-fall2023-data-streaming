@@ -131,6 +131,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/lec2/demo_2a/</loc>
+         <lastmod>2023-10-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/lec2/demo_2b/</loc>
+         <lastmod>2023-10-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/lec3/</loc>
          <lastmod>2023-10-24</lastmod>
          <changefreq>daily</changefreq>
