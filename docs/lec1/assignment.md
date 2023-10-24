@@ -68,7 +68,8 @@ You will set up your cluster in the Confluent Cloud, use both asynchronous and s
 
 - Code quality and readability: 3pts
 - Data visualization and performance analysis: 2pts
-- Extra credit  when you're using your own data schema with dataclass (+1pt) and seriealization (+1pt).
+- Extra credit: when you're using your own data schema with dataclass (+1pt) and seriealization (+1pt).
+- Extra creidt: when you're using another performance metric (other than the elapsed time per 500 messages) to measure Producer Performance. (See Appendix) 
 
 **Notes:** 
 
@@ -112,3 +113,29 @@ Review and understand the provided [Kafka producer code](https://developer.confl
 **Deliverables:**
 
 Please submit your solutions in a file named `assignment1_{your name}`. This can be in raw markdown (.md) or text (.txt) format. Ensure your document does not have excessive formatting, as this may distract from the content of your answers.
+
+
+**Appendix** 
+
+The metrics below are used to assess the performance of a Kafka producer. They measure slightly different aspects. 
+
+1. **Producer Response Rate**:
+   - This metric tracks how many messages are being successfully delivered (acknowledged by the broker) over a period of time.
+   - It provides insight into how well the producer is succeeding in its primary role of sending messages to the broker.
+   - Typically, the "response" in this context refers to the broker's acknowledgment for a message or a batch of messages.
+
+2. **Request Rate**:
+   - This metric counts the number of requests the producer sends per second.
+   - Unlike the producer response rate, this considers both successful and failed attempts. Thus, a producer with a high request rate could still have a lot of failed deliveries if the system is overwhelmed or there are other issues.
+   - This is more about the workload or activity level of the producer. A high rate might mean the producer is attempting to send messages rapidly, but it doesn't indicate how successful those attempts are.
+
+3. **Elapsed Time per 500 Messages (Used in the Problem #1)**:
+   - This is a specific measurement of efficiency. It calculates how long it takes for the producer to send 500 messages (or any other specified batch size).
+   - This can be helpful for benchmarking performance, especially when tuning or comparing different producer configurations.
+   - It's more about the speed or efficiency of the producer for a specific task.
+
+Tracking all three can give a good holistic view of producer performance. They complement each other by measuring different aspects. So in summary:
+
+- Request rate - load on the producer
+- Response rate - actual delivery throughput
+- Elapsed time - latency for a batch
