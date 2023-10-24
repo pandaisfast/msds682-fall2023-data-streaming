@@ -99,18 +99,49 @@ C. `{"message": "Hello World", "recipient": "user123"}`
 
 ### Examples of Managing Topics 
 
-(Please read Lecture 2 PPT)
+(Please read Lecture 2 PPT for details.)
 
 
 ## Producers 
 
 ### Examples of Writing Producers 
 
-(Please read Lecture 2 PPT)
+(Please read Lecture 2 PPT for details.)
+
+In the Confluent Kafka Python client:
+
+- `producer.poll()`: 
+  - Checks for delivery reports of sent messages.
+  - Services the producer's internal queue to send messages.
+  - Raises errors that occurred during message production.
+
+- `producer.flush()`: 
+  - Waits for all outstanding messages in the producer's queue to be delivered and acknowledged by the broker.
+  - Essentially ensures that all messages have been sent before proceeding.
+
+Both functions aid in managing and ensuring the successful production of messages to Kafka.
 
 ### Asynchronous Producer and Synchronous Producer
 
-Below is a table that summarizes the use of `flush()`, `poll()`, and other methods for both asynchronous and synchronous Kafka producers:
+**Synchronous Producer**:
+
+- **Use**: Less common and not default but useful for transaction systems, like credit card applications.
+- **Processes**:
+    - Sends data and waits for broker confirmation, blocking further execution.
+    - Ensures every message is delivered but can be slower.
+    - Performance might decline with high broker acknowledgment wait times.
+
+**Asynchronous Producer**:
+
+- **Use**: Default choice, ideal for high throughput, low-latency, streaming, user activity tracking, and background tasks.
+- **Processes**:
+    - Non-blocking; sends data without awaiting acknowledgment.
+    - Continues sending subsequent messages immediately.
+- **Options**:
+    - **Callbacks**: Provides notifications on successful delivery or errors, allowing for appropriate actions.
+    - **Fire and Forget**: Sends messages without waiting or checking feedback, maximizing throughput but potentially missing delivery issues.
+
+Below is a table that summarizes the use of `flush()`, `poll()`, and other methods for both asynchronous and synchronous Kafka producers.
 
 | **Method/Action** | **Asynchronous Producer** | **Synchronous Producer** |
 |--------------------|---------------------------|--------------------------|
