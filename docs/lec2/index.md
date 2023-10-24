@@ -229,34 +229,39 @@ Producer                                        Broker
 ```
 ### Data Types and Serialization in Kafka
 
-**Definition**: 
-Serialization in Kafka is the transformation of data into a format suitable for efficient storage and transmission, typically binary.
-
+**Definition**: **Serialization** in Kafka is the transformation of data into a format suitable for efficient storage and transmission, typically binary.
 
 Serialization is a common process in many systems. Its emphasis in Kafka is due to the need for efficient data transfer and storage. Formats like `Avro` not only offer compact serialization but also support evolving data structures and ensure type safety.
 
 **Serialization Formats**:
+
 1. **JSON**: 
-   - Text-based and human-readable.
-   - Maps to native data structures in many languages.
-   - Less efficient than binary formats like Avro.
+
+      - Text-based and human-readable.
+      - Maps to native data structures in many languages.
+      - Less efficient than binary formats like Avro.
   
 2. **Avro**: 
-   - Binary serialization format.
-   - Compact and efficient.
-   - Uses schemas to ensure type safety and support data structure evolution.
+
+      - Binary serialization format.
+      - Compact and efficient.
+      - Uses schemas to ensure type safety and support data structure evolution.
 
 **The Process**:
+
 - **Serialization**: Transforming application data into binary format for efficient storage and transmission. Done by producers before dispatching to Kafka.
 - **Deserialization**: Converting binary data back to its original format for consumers. Done by consumers after retrieving from Kafka.
 
 **Consistency**:
-- It's vital to maintain a consistent serialization technique within a single Kafka topic for data integrity.
+
+It's vital to maintain a consistent serialization technique within a single Kafka topic for data integrity.
 
 **Kafka's Role**:
-- Kafka doesn’t directly manage serialization or deserialization. Instead, the Kafka client library handles this, streamlining the process for both producing and consuming messages.
+
+Kafka doesn’t directly manage serialization or deserialization. Instead, the Kafka client library handles this, streamlining the process for both producing and consuming messages.
 
 **Avro Schemas**:
+
 1. **Schema Evolution**: 
     - Allows changes to the data schema without breaking compatibility. 
     - Enables old and new versions of data to coexist without errors, promoting backward and forward compatibility.
@@ -268,10 +273,9 @@ Serialization is a common process in many systems. Its emphasis in Kafka is due 
 
 ### Performance Considerations - 1) Throughput and 2) Overhead
 
-- Batching is largely for performance reasons.
-- In high-throughput applications, sending each message individually would result in significant network overhead.
+Batching is largely for performance reasons. In high-throughput applications, sending each message individually would result in significant network overhead.
 
-Here is the **trade-off**: By waiting to accumulate messages, you can send fewer, larger batches, which can improve throughput. However, this could introduce a slight delay in individual message delivery times
+Here is the **trade-off**: By waiting to accumulate messages, you can send fewer, larger batches, which can improve throughput. However, this could introduce a slight delay in individual message delivery times.
 
 Official Confluent Documentation:
 https://docs.confluent.io/platform/current/installation/configuration/producer-configs.html
