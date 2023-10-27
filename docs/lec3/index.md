@@ -150,3 +150,37 @@ I also create workflow chart to explain the relationship between these terms in 
 ```
 
 The process flows from top to bottom, depicting the typical flow of records from the Kafka broker to the consumer.
+
+
+## Kafka Consumer Group
+
+1. **Groups and Consumers**: Every Kafka reader (or "consumer") is part of a group.
+2. **Unique ID**: Each group has a unique identifier called "group.id".
+3. **Consumer Group**: A logical set of consumers that consume from the same topic.
+4. **Same Logic, Different Partitions**: Each consumer within a group runs the same logic but consumes data from different partitions.
+5. **Exclusive Partition Consumption**: Within a group, data from a single partition is consumed by only one consumer.
+6. **Multiple Group Consumption**: Different consumer groups can independently consume the same topic without interfering with each other.
+7. **Excess Consumers**: If the number of consumers in a group exceeds the number of partitions in a topic, the extra consumers remain idle as they have no data to consume.
+
+Within the same consumer group (i.e., with the same `group.id`), it's generally recommended that all consumers have consistent settings. This ensures that all consumers in that group behave in a consistent manner, especially when it comes to handling offsets, rebalancing, and processing records. However, there might be some configurations that can differ, but fundamental configurations, especially those affecting processing semantics, should be consistent.
+
+
+## Subscription
+
+1. **Why use subscription in Kafka**:
+   
+      - **Topic Specification**: Consumers use subscriptions to specify which topics they want to consume from.
+      
+      - **Load Balancing**: For consumers in the same consumer group, Kafka automatically balances the load, ensuring each consumer reads from certain partitions, allowing parallel processing.
+      
+      - **Dynamic Topic Matching**: Consumers can subscribe to topics that match a certain pattern rather than specifying exact topics.
+
+2. **Can we skip using subscription?**:
+
+      - Without using subscription, a consumer wouldn't know from which topic to fetch data. However, Kafka allows "manual assignment" where consumers can be directly assigned to specific partitions without subscribing to the whole topic. This bypasses Kafka's automatic load-balancing, making developers manually manage it.
+      
+      - Manual assignment is useful in specific cases where precise control is needed, but generally, using subscriptions is more convenient as it automates partition assignment and balancing.
+
+3. **Subscribing to Multiple Topics**: 
+   
+      - A consumer can listen to more than one topic using a pattern. When using patterns, follow the "regexp" format.
