@@ -149,7 +149,7 @@ nav:
   - "Lec 2: 10/24 T (Room 529)":
     - lec2/index.md
     - "Additional Topics": lec2/2.1.md
-    - Notebook - Create Topics: assets/msds-lec2-topic-producer/demo_a_creating_topic.ipynb
+    - "Notebook - Create Topics": assets/msds-lec2-topic-producer/demo_a_creating_topic.ipynb
     - "Notebook - Async Producer": assets/msds-lec2-topic-producer/demo_b_producer_async.ipynb
     - "Notebook - Compare Sync vs Async": assets/msds-lec2-topic-producer/demo_c_producer_compare.ipynb
     - "Notebook - Async Producer w/ Serialization": assets/msds-lec2-topic-producer/demo_b_producer_serialization.ipynb
@@ -159,6 +159,7 @@ nav:
   - "Lec 3: 10/27 F (Room 529)":
     - lec3/index.md
     - "Additional Topics": lec3/3.1.md
+    - "Notebook - Consumer": assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb
     - "Demo 3A": lec3/demo_or_exercise.md
     - "Demo 3B": lec3/demo_or_exercise_2.md
     - "Assignment 2": lec3/assignment.md
