@@ -27,6 +27,14 @@ config = load_config()
 # Consumer Group ID for ensuring unique offset tracking
 CONSUMER_GROUP_ID = os.getenv('CONSUMER_GROUP_ID', 'default-group-id')
 
+## consumer 
+
+def on_assign(consumer, partitions):
+    """Callback executed when partitions are assigned. Sets partition offset to beginning."""
+    for partition in partitions:
+        partition.offset = OFFSET_BEGINNING
+    consumer.assign(partitions)
+
 async def consume(topic_name):
     """Asynchronously consume data from the specified Kafka Topic."""
     
@@ -51,12 +59,6 @@ async def consume(topic_name):
         else:
             print(f"consumed message {message.key()}: {message.value()}")
         await asyncio.sleep(0.1)  # Brief pause to reduce CPU load
-
-def on_assign(consumer, partitions):
-    """Callback executed when partitions are assigned. Sets partition offset to beginning."""
-    for partition in partitions:
-        partition.offset = OFFSET_BEGINNING
-    consumer.assign(partitions)
 
 def main():
     """Entry point of the script. Starts producer-consumer tasks."""
