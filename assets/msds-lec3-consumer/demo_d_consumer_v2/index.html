@@ -411,7 +411,7 @@ SASL_PASSWORD={API Secret}
 CONSUMER_GROUP_ID=my_consumer_group
 </code></pre> <h3 id=3-running-the-demo><strong>3. Running the Demo</strong><a class=anchor-link href=#3-running-the-demo>¶</a></h3><p>Once the setup is complete, run the demo script:</p> <div class=highlight><pre><span></span>python3<span class=w> </span>demo_d_consumer_v2.py<span class=w> </span>consumer_example_v2
 </pre></div> <h3 id=4-optional-jupyter-notebook-setup><strong>4. (Optional) Jupyter Notebook Setup</strong><a class=anchor-link href=#4-optional-jupyter-notebook-setup>¶</a></h3><p>If using Jupyter Notebook or Jupyter Lab, it's crucial to set the appropriate Python kernel.</p> <h4 id=41-install-ipykernel><strong>4.1. Install <code>ipykernel</code></strong><a class=anchor-link href=#41-install-ipykernel>¶</a></h4><div class=highlight><pre><span></span>pip<span class=w> </span>install<span class=w> </span>ipykernel
-</pre></div> <h4 id=42-set-the-jupyter-kernel><strong>4.2. Set the Jupyter Kernel</strong><a class=anchor-link href=#42-set-the-jupyter-kernel>¶</a></h4><ul> <li>Start Jupyter Notebook or Jupyter Lab.</li> <li>Open the desired notebook.</li> <li>Select <code>Kernel</code> -&gt; <code>Change kernel</code> -&gt; <code>venv</code>.</li> </ul> <p><strong>Note</strong>: Asynchronous tasks in Jupyter might behave unexpectedly. It's advised to run the Kafka code as a standalone script.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=create-topics>Create Topics<a class=anchor-link href=#create-topics>¶</a></h2><p>This part is the same as demos in Lec 2.</p> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-1> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=kn>from</span> <span class=nn>confluent_kafka.admin</span> <span class=kn>import</span> <span class=n>AdminClient</span><span class=p>,</span> <span class=n>NewTopic</span>
+</pre></div> <h4 id=42-set-the-jupyter-kernel><strong>4.2. Set the Jupyter Kernel</strong><a class=anchor-link href=#42-set-the-jupyter-kernel>¶</a></h4><ul> <li>Start Jupyter Notebook or Jupyter Lab.</li> <li>Open the desired notebook.</li> <li>Select <code>Kernel</code> -&gt; <code>Change kernel</code> -&gt; <code>venv</code>.</li> </ul> <p><strong>Note</strong>: Asynchronous tasks in Jupyter might behave unexpectedly. It's advised to run the Kafka code as a standalone script.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=create-topics>Create Topics<a class=anchor-link href=#create-topics>¶</a></h2><p>This part is the same as demos in Lec 2.</p> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-1> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=kn>from</span> <span class=nn>confluent_kafka.admin</span> <span class=kn>import</span> <span class=n>AdminClient</span><span class=p>,</span> <span class=n>NewTopic</span>
     
 <span class=c1>## Recommended way of loading secrets from .env file</span>
 <span class=kn>import</span> <span class=nn>os</span>
@@ -460,12 +460,21 @@ CONSUMER_GROUP_ID=my_consumer_group
 <span class=c1># Create topic</span>
 <span class=n>topic_config</span> <span class=o>=</span> <span class=p>{</span><span class=s1>'cleanup.policy'</span><span class=p>:</span> <span class=s1>'compact'</span><span class=p>}</span> 
 <span class=n>create_topic</span><span class=p>(</span><span class=n>admin_client</span><span class=p>,</span> <span class=n>topic_name</span><span class=p>,</span> <span class=n>partitions</span><span class=o>=</span><span class=mi>3</span><span class=p>,</span> <span class=n>replication_factor</span><span class=o>=</span><span class=mi>3</span><span class=p>,</span> <span class=n>config</span><span class=o>=</span><span class=n>topic_config</span><span class=p>)</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-1>from confluent_kafka.admin import AdminClient, NewTopic ## Recommended way of loading secrets from .env file import os from dotenv import load_dotenv # Load environment variables load_dotenv() def load_config(): """Load Kafka configuration.""" return { 'bootstrap.servers': os.getenv('BOOTSTRAP_SERVERS'), 'security.protocol': os.getenv('SECURITY_PROTOCOL'), 'sasl.mechanisms': os.getenv('SASL_MECHANISMS'), 'sasl.username': os.getenv('SASL_USERNAME'), 'sasl.password': os.getenv('SASL_PASSWORD') } ## def topic_exists(admin_client, topic_name): """Check topic existence.""" return topic_name in set(admin_client.list_topics(timeout=5).topics.keys()) def create_topic(admin_client, topic_name, partitions=1, replication_factor=1, config={}): """Create topic if not existing.""" if not topic_exists(admin_client, topic_name): new_topic = [ NewTopic( topic_name, num_partitions=partitions, replication_factor=replication_factor, config=config)] created_topic = admin_client.create_topics(new_topic) for topic, f in created_topic.items(): try: f.result() print(f"Topic {topic} created") except Exception as e: print(f"Failed to create topic {topic}: {e}") else: print(f"Topic {topic_name} already exists") # Main execution config = load_config() admin_client = AdminClient(config) topic_name = "consumer_example_v2" # Create topic topic_config = {'cleanup.policy': 'compact'} create_topic(admin_client, topic_name, partitions=3, replication_factor=3, config=topic_config) </div> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-2> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=c1># List all topics </span>
+</pre></div> <div class=clipboard-copy-txt id=cell-1>from confluent_kafka.admin import AdminClient, NewTopic ## Recommended way of loading secrets from .env file import os from dotenv import load_dotenv # Load environment variables load_dotenv() def load_config(): """Load Kafka configuration.""" return { 'bootstrap.servers': os.getenv('BOOTSTRAP_SERVERS'), 'security.protocol': os.getenv('SECURITY_PROTOCOL'), 'sasl.mechanisms': os.getenv('SASL_MECHANISMS'), 'sasl.username': os.getenv('SASL_USERNAME'), 'sasl.password': os.getenv('SASL_PASSWORD') } ## def topic_exists(admin_client, topic_name): """Check topic existence.""" return topic_name in set(admin_client.list_topics(timeout=5).topics.keys()) def create_topic(admin_client, topic_name, partitions=1, replication_factor=1, config={}): """Create topic if not existing.""" if not topic_exists(admin_client, topic_name): new_topic = [ NewTopic( topic_name, num_partitions=partitions, replication_factor=replication_factor, config=config)] created_topic = admin_client.create_topics(new_topic) for topic, f in created_topic.items(): try: f.result() print(f"Topic {topic} created") except Exception as e: print(f"Failed to create topic {topic}: {e}") else: print(f"Topic {topic_name} already exists") # Main execution config = load_config() admin_client = AdminClient(config) topic_name = "consumer_example_v2" # Create topic topic_config = {'cleanup.policy': 'compact'} create_topic(admin_client, topic_name, partitions=3, replication_factor=3, config=topic_config) </div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>Topic consumer_example_v2 already exists
+</pre> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-2> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=c1># List all topics </span>
 <span class=c1># https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html</span>
 
 <span class=n>topic_metadata</span> <span class=o>=</span> <span class=n>admin_client</span><span class=o>.</span><span class=n>list_topics</span><span class=p>(</span><span class=n>timeout</span><span class=o>=</span><span class=mi>5</span><span class=p>)</span>
 <span class=nb>list</span><span class=p>(</span><span class=n>topic_metadata</span><span class=o>.</span><span class=n>topics</span><span class=o>.</span><span class=n>keys</span><span class=p>())</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-2># List all topics # https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html topic_metadata = admin_client.list_topics(timeout=5) list(topic_metadata.topics.keys())</div> </div> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=demo-running-consumer>Demo: Running Consumer<a class=anchor-link href=#demo-running-consumer>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-3> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=kn>import</span> <span class=nn>asyncio</span>
+</pre></div> <div class=clipboard-copy-txt id=cell-2># List all topics # https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html topic_metadata = admin_client.list_topics(timeout=5) list(topic_metadata.topics.keys())</div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div> <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type=text/plain tabindex=0> <pre>['consumer_example_v2',
+ 'demo_3_producer_trial3_applicants',
+ 'test_1_topic',
+ 'demo_3_producer_trial2_soccer',
+ 'demo_3_producer_trial3_evaluation',
+ 'demo_3_producer_trial1',
+ 'demo1_free_text',
+ 'topic_example_v1',
+ 'consumer_example']</pre> </div> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=demo-running-consumer>Demo: Running Consumer<a class=anchor-link href=#demo-running-consumer>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-3> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=kn>import</span> <span class=nn>asyncio</span><span class=o>,</span> <span class=nn>os</span>
 <span class=kn>import</span> <span class=nn>sys</span><span class=o>,</span><span class=nn>random</span>
 <span class=kn>from</span> <span class=nn>confluent_kafka</span> <span class=kn>import</span> <span class=n>Consumer</span><span class=p>,</span> <span class=n>Producer</span><span class=p>,</span> <span class=n>OFFSET_BEGINNING</span><span class=c1># Consumer Group ID for ensuring unique offset tracking</span>
 
@@ -495,12 +504,12 @@ CONSUMER_GROUP_ID=my_consumer_group
         <span class=k>else</span><span class=p>:</span>
             <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>"consumed message </span><span class=si>{</span><span class=n>message</span><span class=o>.</span><span class=n>key</span><span class=p>()</span><span class=si>}</span><span class=s2>: </span><span class=si>{</span><span class=n>message</span><span class=o>.</span><span class=n>value</span><span class=p>()</span><span class=si>}</span><span class=s2>"</span><span class=p>)</span>
         <span class=k>await</span> <span class=n>asyncio</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mf>0.1</span><span class=p>)</span>  <span class=c1># Brief pause to reduce CPU load</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-3>import asyncio import sys,random from confluent_kafka import Consumer, Producer, OFFSET_BEGINNING# Consumer Group ID for ensuring unique offset tracking CONSUMER_GROUP_ID = os.getenv('CONSUMER_GROUP_ID', 'default-group-id') async def consume(topic_name): """Asynchronously consume data from the specified Kafka Topic.""" # Short delay before initiating the consumer await asyncio.sleep(2.5) # Configure consumer with Kafka settings and subscribe to the topic c = Consumer({ **config, "group.id": CONSUMER_GROUP_ID, "auto.offset.reset": "earliest", }) c.subscribe([topic_name], on_assign=on_assign) # Continuously poll for new messages in the topic while True: message = c.poll(1.0) if message is None: print("no message received by consumer") elif message.error() is not None: print(f"error from consumer {message.error()}") else: print(f"consumed message {message.key()}: {message.value()}") await asyncio.sleep(0.1) # Brief pause to reduce CPU load </div> </div> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-4> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=k>def</span> <span class=nf>on_assign</span><span class=p>(</span><span class=n>consumer</span><span class=p>,</span> <span class=n>partitions</span><span class=p>):</span>
+</pre></div> <div class=clipboard-copy-txt id=cell-3>import asyncio, os import sys,random from confluent_kafka import Consumer, Producer, OFFSET_BEGINNING# Consumer Group ID for ensuring unique offset tracking CONSUMER_GROUP_ID = os.getenv('CONSUMER_GROUP_ID', 'default-group-id') async def consume(topic_name): """Asynchronously consume data from the specified Kafka Topic.""" # Short delay before initiating the consumer await asyncio.sleep(2.5) # Configure consumer with Kafka settings and subscribe to the topic c = Consumer({ **config, "group.id": CONSUMER_GROUP_ID, "auto.offset.reset": "earliest", }) c.subscribe([topic_name], on_assign=on_assign) # Continuously poll for new messages in the topic while True: message = c.poll(1.0) if message is None: print("no message received by consumer") elif message.error() is not None: print(f"error from consumer {message.error()}") else: print(f"consumed message {message.key()}: {message.value()}") await asyncio.sleep(0.1) # Brief pause to reduce CPU load </div> </div> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-4> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=k>def</span> <span class=nf>on_assign</span><span class=p>(</span><span class=n>consumer</span><span class=p>,</span> <span class=n>partitions</span><span class=p>):</span>
 <span class=w>    </span><span class=sd>"""Callback executed when partitions are assigned. Sets partition offset to beginning."""</span>
     <span class=k>for</span> <span class=n>partition</span> <span class=ow>in</span> <span class=n>partitions</span><span class=p>:</span>
         <span class=n>partition</span><span class=o>.</span><span class=n>offset</span> <span class=o>=</span> <span class=n>OFFSET_BEGINNING</span>
     <span class=n>consumer</span><span class=o>.</span><span class=n>assign</span><span class=p>(</span><span class=n>partitions</span><span class=p>)</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-4>def on_assign(consumer, partitions): """Callback executed when partitions are assigned. Sets partition offset to beginning.""" for partition in partitions: partition.offset = OFFSET_BEGINNING consumer.assign(partitions)</div> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-5> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=k>def</span> <span class=nf>delivery_report</span><span class=p>(</span><span class=n>err</span><span class=p>,</span> <span class=n>msg</span><span class=p>):</span>
+</pre></div> <div class=clipboard-copy-txt id=cell-4>def on_assign(consumer, partitions): """Callback executed when partitions are assigned. Sets partition offset to beginning.""" for partition in partitions: partition.offset = OFFSET_BEGINNING consumer.assign(partitions)</div> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-5> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=k>def</span> <span class=nf>delivery_report</span><span class=p>(</span><span class=n>err</span><span class=p>,</span> <span class=n>msg</span><span class=p>):</span>
 <span class=w>    </span><span class=sd>"""Callback function to report the result of a produce operation."""</span>
     <span class=k>if</span> <span class=n>err</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
         <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>"Message delivery failed: </span><span class=si>{</span><span class=n>err</span><span class=si>}</span><span class=s2>"</span><span class=p>)</span>
@@ -532,263 +541,184 @@ CONSUMER_GROUP_ID=my_consumer_group
     <span class=n>t2</span> <span class=o>=</span> <span class=n>asyncio</span><span class=o>.</span><span class=n>create_task</span><span class=p>(</span><span class=n>consume</span><span class=p>(</span><span class=n>topic_name</span><span class=p>))</span>  <span class=c1># Task for consuming messages</span>
     <span class=k>await</span> <span class=n>t1</span>  <span class=c1># Wait for producer task to complete (infinite loop in this case)</span>
     <span class=k>await</span> <span class=n>t2</span>  <span class=c1># Wait for consumer task to complete (infinite loop in this case)</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-5>def delivery_report(err, msg): """Callback function to report the result of a produce operation.""" if err is not None: print(f"Message delivery failed: {err}") else: print(f"Message delivered to {msg.topic()} [{msg.partition()}] at offset {msg.offset()}") async def produce(topic_name, config = config): """Asynchronously produce random person-location data into the specified Kafka Topic.""" p = Producer(config) names = ["Alice", "Bob", "Charlie"] # Continuously produce messages to the topic while True: name = random.choice(names) lat = random.uniform(-90, 90) long = random.uniform(-180, 180) message_key = f"rider-{name}".encode("utf-8") message_value = f"rider {name} requests a car at ({lat:.2f}, {long:.2f})".encode("utf-8") p.produce(topic_name, key=message_key, value=message_value, callback=delivery_report) p.poll(0.1) # Poll to allow callbacks to be executed await asyncio.sleep(0.1) # Brief pause to reduce CPU load async def produce_consume(topic_name): """Concurrently run producer and consumer tasks using asyncio.""" t1 = asyncio.create_task(produce(topic_name)) # Task for producing messages t2 = asyncio.create_task(consume(topic_name)) # Task for consuming messages await t1 # Wait for producer task to complete (infinite loop in this case) await t2 # Wait for consumer task to complete (infinite loop in this case) </div> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-6> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=c1>## main</span>
+</pre></div> <div class=clipboard-copy-txt id=cell-5>def delivery_report(err, msg): """Callback function to report the result of a produce operation.""" if err is not None: print(f"Message delivery failed: {err}") else: print(f"Message delivered to {msg.topic()} [{msg.partition()}] at offset {msg.offset()}") async def produce(topic_name, config = config): """Asynchronously produce random person-location data into the specified Kafka Topic.""" p = Producer(config) names = ["Alice", "Bob", "Charlie"] # Continuously produce messages to the topic while True: name = random.choice(names) lat = random.uniform(-90, 90) long = random.uniform(-180, 180) message_key = f"rider-{name}".encode("utf-8") message_value = f"rider {name} requests a car at ({lat:.2f}, {long:.2f})".encode("utf-8") p.produce(topic_name, key=message_key, value=message_value, callback=delivery_report) p.poll(0.1) # Poll to allow callbacks to be executed await asyncio.sleep(0.1) # Brief pause to reduce CPU load async def produce_consume(topic_name): """Concurrently run producer and consumer tasks using asyncio.""" t1 = asyncio.create_task(produce(topic_name)) # Task for producing messages t2 = asyncio.create_task(consume(topic_name)) # Task for consuming messages await t1 # Wait for producer task to complete (infinite loop in this case) await t2 # Wait for consumer task to complete (infinite loop in this case) </div> </div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class="jp-Cell jp-CodeCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="CodeMirror cm-s-jupyter"> <div class=zeroclipboard-container> <clipboard-copy for=cell-6> <div> <span class=notice hidden>Copied!</span> <svg aria-hidden=true class=clipboard-copy-icon data-view-component=true height=20 version=1.1 viewbox="0 0 16 16" width=20> <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill=currentColor fill-rule=evenodd></path> <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill=currentColor fill-rule=evenodd></path> </svg> </div> </clipboard-copy> </div> <div class="highlight-ipynb hl-python"><pre><span></span><span class=c1>## main</span>
 <span class=n>topic_name</span> <span class=o>=</span> <span class=s1>'consumer_example_v2'</span>
 <span class=k>await</span> <span class=n>produce_consume</span><span class=p>(</span><span class=n>topic_name</span><span class=p>)</span>
-</pre></div> <div class=clipboard-copy-txt id=cell-6>## main topic_name = 'consumer_example_v2' await produce_consume(topic_name)</div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>consumed message b'rider-Charlie': b'rider Charlie requests a car at (-31.57, 153.22)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-89.11, -129.61)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-38.85, -4.53)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-47.60, 90.91)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.77, 18.43)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (56.72, -86.71)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-53.12, -69.19)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-9.57, -132.77)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-34.03, 12.96)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (8.60, 178.15)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-57.89, 43.77)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (26.04, -161.08)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-81.62, -52.56)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (32.93, 162.49)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-11.07, -34.39)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (45.34, -132.42)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (60.67, 115.99)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-32.24, 37.07)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (87.69, -136.87)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-24.59, -159.27)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-83.14, 118.04)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (49.10, -177.97)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (84.91, 3.64)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (40.64, 73.17)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (38.24, -53.73)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-52.01, 63.70)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-29.47, -2.25)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-3.23, 90.91)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (37.09, -109.12)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-85.20, -110.22)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (68.42, 179.76)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-52.18, -107.32)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (15.48, -73.33)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-64.08, -135.77)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (79.92, 40.17)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-47.98, -4.48)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (85.41, 19.16)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.29, 72.06)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-65.37, -95.29)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (75.11, 23.46)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-32.11, 17.58)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (25.48, -158.42)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (21.79, 50.57)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (88.63, 13.76)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-80.53, -172.23)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-3.85, -4.82)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (76.77, 175.07)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-26.26, 127.66)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (34.39, 172.99)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (7.13, -178.88)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (25.97, 153.11)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-33.28, 161.53)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-55.95, -1.90)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (49.76, 55.86)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-59.25, -158.13)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (38.99, -56.08)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-3.77, -57.24)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (69.08, 173.83)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-12.69, -33.43)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-35.12, 67.89)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (73.98, -114.95)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-72.70, -16.57)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (75.66, -22.00)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-63.25, -70.30)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (5.78, -33.65)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-18.64, -77.67)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (25.37, 94.83)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-52.76, 8.39)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-20.56, 76.42)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (30.24, -176.39)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-8.09, -145.33)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-80.96, 74.49)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-49.20, -142.73)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-84.53, -118.56)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.00, 100.67)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-52.86, -101.61)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-27.80, -149.04)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-11.23, -18.95)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (40.79, -128.12)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (2.51, -169.00)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-24.90, -138.60)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-70.07, -144.45)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-43.37, -18.65)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-28.38, 127.05)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-76.58, 33.50)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-16.41, -133.91)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-49.47, -124.82)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (74.14, 102.80)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-41.48, -46.84)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (51.83, 56.03)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (74.01, -48.67)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (3.44, -161.87)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (86.13, 27.10)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (69.33, -0.22)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (19.56, 50.00)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (67.45, -116.95)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-41.18, -130.26)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-37.95, -68.36)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-42.20, 89.47)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-13.11, -0.29)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-0.27, 114.02)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (83.11, 24.12)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-6.92, 34.26)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-15.43, 91.20)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-26.65, -51.00)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (20.11, 25.07)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-69.38, 136.51)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-2.19, -152.09)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-0.98, 10.95)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (1.32, -47.50)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-80.17, 75.01)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-3.33, 55.31)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (53.25, -167.91)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-66.21, -21.86)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-31.84, 149.09)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (62.39, -142.41)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (47.05, 77.02)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-67.94, 115.37)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (46.67, 154.70)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (4.95, 38.52)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (12.24, 112.62)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-23.93, 78.83)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (77.96, 106.94)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (23.90, 95.76)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (0.15, -50.43)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (28.78, -21.39)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-22.06, -69.42)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-4.11, -101.62)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-79.59, -96.03)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-72.61, 23.21)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-13.23, 34.42)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-23.78, 159.32)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-71.05, -164.12)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-78.84, -67.91)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-67.99, 146.91)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (83.24, -154.22)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (65.20, -81.71)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-57.74, 159.25)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-5.13, 163.48)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-72.05, -127.17)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (36.56, 141.18)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (82.75, -21.18)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-83.83, -62.09)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (54.29, -110.65)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-81.88, 128.10)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (84.09, -0.98)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-82.44, -55.05)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (43.44, -70.66)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-21.65, -72.01)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-46.17, -3.63)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (76.62, 64.90)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (57.93, 118.98)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-1.36, -61.27)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (14.08, 104.84)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (71.11, 30.07)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (53.58, -124.03)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (52.16, 149.93)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (24.20, 127.58)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-58.79, 104.08)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (48.13, 53.59)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (31.19, -42.78)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-69.09, -48.35)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-25.28, 23.86)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-34.22, -17.43)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (81.46, -89.28)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (39.48, -122.92)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-44.49, 112.55)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-32.96, 51.09)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (68.37, -127.39)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-84.54, 154.00)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (66.33, 154.44)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (70.34, -140.67)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-32.88, 115.50)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-62.63, 141.35)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (32.57, -77.59)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-15.13, 103.69)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-84.52, 60.61)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (77.83, -30.28)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-16.92, 127.11)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (85.75, 140.65)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-17.17, 22.40)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (49.97, 149.41)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-18.22, 129.42)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-16.35, -44.39)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (73.61, -139.63)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (30.69, -83.49)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (42.20, 162.31)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-43.55, -133.41)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (81.33, -104.23)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-67.09, -142.63)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-66.16, -64.76)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-50.97, -142.95)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (8.04, -31.66)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (53.29, 50.05)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-76.66, -116.29)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (86.91, 113.24)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-19.74, 8.06)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-54.38, -91.01)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (19.21, -166.86)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-25.40, -19.73)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-0.86, -176.02)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (24.21, 23.08)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (36.33, -17.61)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-80.96, 27.42)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (26.67, 22.43)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (12.56, -33.47)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (1.01, 101.69)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.69, -32.67)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-70.49, 170.70)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-45.61, 145.64)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-82.47, 116.91)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-74.88, -47.87)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-3.39, -109.72)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-0.10, -167.89)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-0.73, -156.10)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (72.25, -0.05)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-19.84, -40.65)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (74.91, 118.46)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-50.00, 87.74)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-10.35, -37.81)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-17.32, -123.00)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-37.81, -22.05)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-5.75, 101.76)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-17.34, 148.91)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-65.56, 32.23)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-1.09, 149.20)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (14.08, 3.85)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (14.93, 19.69)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (40.85, -65.06)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-9.95, 99.12)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-74.20, 177.73)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-25.35, -173.05)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-0.97, 55.58)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-38.81, 19.83)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-62.61, 40.97)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-40.20, 131.71)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-85.76, 140.42)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (82.64, -126.00)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (59.06, 72.57)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (28.81, -7.48)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-46.89, -2.50)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (16.54, 21.80)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (-31.86, -126.35)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-64.02, -32.56)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (51.57, -75.23)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (70.92, 128.51)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (21.61, 161.78)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (13.96, -136.63)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (82.50, 79.24)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-17.32, -97.45)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (-38.64, -162.57)'
-consumed message b'rider-Charlie': b'rider Charlie requests a car at (72.20, 7.14)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (37.77, -63.35)'
-consumed message b'rider-Bob': b'rider Bob requests a car at (1.14, -75.88)'
+</pre></div> <div class=clipboard-copy-txt id=cell-6>## main topic_name = 'consumer_example_v2' await produce_consume(topic_name)</div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>Message delivered to consumer_example_v2 [2] at offset 365
+Message delivered to consumer_example_v2 [2] at offset 366
+Message delivered to consumer_example_v2 [1] at offset 693
+Message delivered to consumer_example_v2 [1] at offset 694
+Message delivered to consumer_example_v2 [1] at offset 695
+Message delivered to consumer_example_v2 [1] at offset 696
+Message delivered to consumer_example_v2 [2] at offset 367
+Message delivered to consumer_example_v2 [2] at offset 368
+Message delivered to consumer_example_v2 [1] at offset 697
+Message delivered to consumer_example_v2 [2] at offset 369
+Message delivered to consumer_example_v2 [1] at offset 698
+Message delivered to consumer_example_v2 [1] at offset 699
+Message delivered to consumer_example_v2 [1] at offset 700
+Message delivered to consumer_example_v2 [1] at offset 701
+Message delivered to consumer_example_v2 [1] at offset 702
+Message delivered to consumer_example_v2 [2] at offset 370
+Message delivered to consumer_example_v2 [1] at offset 703
+Message delivered to consumer_example_v2 [1] at offset 704
+Message delivered to consumer_example_v2 [1] at offset 705
+Message delivered to consumer_example_v2 [1] at offset 706
+Message delivered to consumer_example_v2 [2] at offset 371
+no message received by consumer
+</pre> </div> </div> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=application/vnd.jupyter.stderr tabindex=0> <pre>
+<span class=ansi-red-fg>---------------------------------------------------------------------------</span>
+<span class=ansi-red-fg>CancelledError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb Cell 11</span> line <span class=ansi-cyan-fg>2
+</span><span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span> p.poll(0.1)  # Poll to allow callbacks to be executed
+<span class=ansi-green-fg>---&gt; &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span> await asyncio.sleep(0.1)
+
+File <span class=ansi-green-fg>~/.asdf/installs/python/3.10.12/lib/python3.10/asyncio/tasks.py:605</span>, in <span class=ansi-cyan-fg>sleep</span><span class=ansi-blue-fg>(delay, result)</span>
+<span class="ansi-green-intense-fg ansi-bold">    604</span> try:
+<span class=ansi-green-fg>--&gt; 605</span>     return await future
+<span class="ansi-green-intense-fg ansi-bold">    606</span> finally:
+
+<span class=ansi-red-fg>CancelledError</span>: 
+
+During handling of the above exception, another exception occurred:
+
+<span class=ansi-red-fg>CancelledError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb Cell 11</span> line <span class=ansi-cyan-fg>3
+</span><span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> ## main
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> topic_name = 'consumer_example_v2'
+<span class=ansi-green-fg>----&gt; &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> await produce_consume(topic_name)
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb Cell 11</span> line <span class=ansi-cyan-fg>3
+</span><span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=28'&gt;29&lt;/a&gt;</span> t1 = asyncio.create_task(produce(topic_name))  # Task for producing messages
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=29'&gt;30&lt;/a&gt;</span> t2 = asyncio.create_task(consume(topic_name))  # Task for consuming messages
+<span class=ansi-green-fg>---&gt; &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span> await t1  # Wait for producer task to complete (infinite loop in this case)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/Shared/msds682-fall2023-data-streaming/docs/assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb#X12sZmlsZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> await t2
+
+<span class=ansi-red-fg>CancelledError</span>: </pre> </div> </div> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>consumed message b'rider-Charlie': b'rider Charlie requests a car at (28.63, -125.50)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (61.47, 33.01)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-12.13, 7.45)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-7.88, -93.66)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (26.58, 63.32)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (16.93, -3.60)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-19.51, -80.40)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-63.51, -102.10)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (82.77, -34.13)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (58.92, -173.04)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-61.12, -12.63)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (48.07, 62.96)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-14.38, -89.90)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-64.04, -42.02)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (4.89, 15.94)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (49.69, 137.35)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (34.65, 27.55)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (78.73, 138.37)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-30.84, 83.77)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (61.23, -175.55)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-50.08, 81.76)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (70.90, 175.42)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (4.87, 34.05)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (15.21, 162.24)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.63, 25.88)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (70.38, 118.36)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-71.20, 0.27)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (69.84, 174.89)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (84.40, 82.65)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-62.20, 37.44)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (80.24, -88.26)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (20.32, -144.46)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-69.60, -103.07)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-83.37, -7.06)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-34.46, -99.02)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (82.32, -61.45)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (73.42, -71.05)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (14.88, -71.52)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-57.50, -24.49)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-54.94, -78.41)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-5.60, -111.47)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (81.38, 112.31)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (17.26, -179.96)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (42.10, -47.91)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (74.25, 130.48)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-43.72, 113.04)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (60.67, 69.04)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (48.62, 131.94)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-34.42, 129.85)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (44.91, 171.18)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-47.51, 155.57)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (75.34, 113.56)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (40.19, -129.86)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-51.56, -172.09)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-13.47, 40.42)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-1.64, -123.83)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (4.52, -156.50)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-28.06, 14.21)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (23.71, -149.62)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (80.86, 153.21)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (46.64, 96.87)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (45.29, 23.47)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (56.03, 156.85)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-33.02, -10.21)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.79, 135.13)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-40.96, 80.71)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-37.66, -161.83)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (36.84, 74.64)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-62.10, 144.37)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-31.51, 73.93)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (64.57, 34.09)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (16.46, 179.02)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-14.37, 103.56)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (1.96, 48.17)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-56.09, -106.65)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (15.53, -93.87)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-2.73, -56.66)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-83.38, -108.05)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-77.95, 33.78)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-81.88, 88.24)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (79.38, -75.55)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-32.61, 76.11)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-39.70, -111.08)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (6.41, 153.13)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-89.38, -132.08)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (89.27, 177.14)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-51.51, 26.81)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (78.43, -30.36)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (1.46, -112.41)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (52.85, -139.87)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (86.55, -137.08)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-19.45, -108.53)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (81.50, -123.00)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (31.08, -56.96)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-39.23, 97.54)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (66.66, 3.98)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (33.56, -121.59)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-33.97, -64.55)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (56.90, -144.24)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (32.10, -55.83)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (71.64, -140.50)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (32.10, -39.73)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (23.75, -161.67)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-75.30, 96.04)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (17.59, -161.50)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-40.82, 165.34)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-9.28, -32.74)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (3.55, -176.85)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (23.81, -91.24)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (72.14, -40.14)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-69.37, 62.71)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (11.61, -78.56)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-37.31, -173.13)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-7.86, 17.74)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (82.94, 129.14)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-39.29, 8.48)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (27.87, 163.49)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-55.38, 44.25)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (85.66, 175.96)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (57.24, 87.60)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-47.73, -82.15)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (40.51, 136.66)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (23.32, 104.03)'
+consumed message b'rider-Charlie': b'rider Charlie requests a car at (-16.94, 84.65)'
+consumed message b'rider-Bob': b'rider Bob requests a car at (-77.39, 83.89)'
 </pre> </div> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>Note: Stopping the execution of a cell in Jupyter (such as by pressing the "Stop" button) will interrupt the kernel, which should ideally stop the execution of the code within the cell. However, there could be a few reasons why you're still seeing outputs:</p> <ol> <li><p><strong>Asynchronous Nature</strong>: The nature of asynchronous tasks means that while the main task (in this case, the Jupyter cell execution) might be stopped, some tasks might still be in the queue to be executed.</p> </li> <li><p><strong>Kafka Consumer Lag</strong>: Depending on how you've configured Kafka and your consumer, there might be a lag between when messages are produced and when they are consumed. If your producer produced many messages quickly, the consumer might still be processing those even after the producer has stopped.</p> </li> <li><p><strong>Jupyter Kernel State</strong>: In some situations, the Jupyter kernel might not effectively stop the execution of certain tasks or threads. This can especially be the case with certain libraries or tools that manage their own internal threads or processes.</p> </li> </ol> <p>To ensure that everything is stopped:</p> <ol> <li><p><strong>Manual Stop</strong>: After you've pressed the "Stop" button in Jupyter, you can manually close the producer and consumer connections to Kafka if they were opened. This will ensure that no new messages are produced or consumed.</p> </li> <li><p><strong>Restart the Kernel</strong>: In the Jupyter Notebook toolbar, there's an option to restart the kernel. This will completely reset the Python process running your notebook, ensuring all tasks, threads, and processes related to it are stopped. It's a bit of a "nuclear option", but it's a surefire way to stop everything.</p> </li> <li><p><strong>Improve Cleanup in Code</strong>: Consider adding cleanup code that will be executed when stopping the tasks. For instance, closing the Kafka connections gracefully, ensuring all asynchronous tasks are canceled, etc.</p> </li> </ol> <p>In the long term, if you're finding that running these tasks in Jupyter is causing issues, you might want to consider other environments for long-running or complex asynchronous tasks, like a standalone Python script, especially when dealing with systems like Kafka.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> </div> </div> </div> </div> </div> <!-- jp-Notebook --> </div> <!-- jupyter-wrapper --> <style>
         ['pre { line-height: 125%; }\ntd.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\nspan.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\ntd.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\nspan.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\n.highlight-ipynb .hll { background-color: var(--jp-cell-editor-active-background) }\n.highlight-ipynb { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }\n.highlight-ipynb .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */\n.highlight-ipynb .err { color: var(--jp-mirror-editor-error-color) } /* Error */\n.highlight-ipynb .k { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword */\n.highlight-ipynb .o { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator */\n.highlight-ipynb .p { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation */\n.highlight-ipynb .ch { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Hashbang */\n.highlight-ipynb .cm { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Multiline */\n.highlight-ipynb .cp { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Preproc */\n.highlight-ipynb .cpf { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.PreprocFile */\n.highlight-ipynb .c1 { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Single */\n.highlight-ipynb .cs { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Special */\n.highlight-ipynb .kc { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Constant */\n.highlight-ipynb .kd { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Declaration */\n.highlight-ipynb .kn { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Namespace */\n.highlight-ipynb .kp { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Pseudo */\n.highlight-ipynb .kr { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Reserved */\n.highlight-ipynb .kt { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Type */\n.highlight-ipynb .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */\n.highlight-ipynb .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */\n.highlight-ipynb .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */\n.highlight-ipynb .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */\n.highlight-ipynb .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */\n.highlight-ipynb .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */\n.highlight-ipynb .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */\n.highlight-ipynb .mh { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Hex */\n.highlight-ipynb .mi { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer */\n.highlight-ipynb .mo { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Oct */\n.highlight-ipynb .sa { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Affix */\n.highlight-ipynb .sb { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Backtick */\n.highlight-ipynb .sc { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Char */\n.highlight-ipynb .dl { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Delimiter */\n.highlight-ipynb .sd { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Doc */\n.highlight-ipynb .s2 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Double */\n.highlight-ipynb .se { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Escape */\n.highlight-ipynb .sh { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Heredoc */\n.highlight-ipynb .si { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Interpol */\n.highlight-ipynb .sx { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Other */\n.highlight-ipynb .sr { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Regex */\n.highlight-ipynb .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */\n.highlight-ipynb .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */\n.highlight-ipynb .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */']
-        </style> <hr> <div class=md-source-file> <small> Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class=timeago datetime=2023-10-26T22:33:15-07:00 locale=en></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span> <br> Created: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class=timeago datetime=2023-10-26T22:33:15-07:00 locale=en></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span> </small> </div> </article> </div> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2023 Jeremy Wenxiao Gu </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "navigation.path", "content.tooltips", "content.code.copy"], "search": "../../javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../javascripts/bundle.726fbb30.min.js></script> <script src=../../../js/timeago.min.js></script> <script src=../../../js/timeago_mkdocs_material.js></script> <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body> </html>
+        </style> <hr> <div class=md-source-file> <small> Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class=timeago datetime=2023-10-26T22:35:38-07:00 locale=en></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span> <br> Created: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class=timeago datetime=2023-10-26T22:33:15-07:00 locale=en></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-10-26</span> </small> </div> </article> </div> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2023 Jeremy Wenxiao Gu </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "navigation.path", "content.tooltips", "content.code.copy"], "search": "../../javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../javascripts/bundle.726fbb30.min.js></script> <script src=../../../js/timeago.min.js></script> <script src=../../../js/timeago_mkdocs_material.js></script> <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body> </html>
