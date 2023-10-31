@@ -166,6 +166,7 @@ nav:
 
   - "Lec 4: 10/31 T (Room 529)":
     - lec4/index.md
+  - "Notebook - Async Producer w/ Serialization": assets/msds-lec4-consumer-schema/demo_e_deserialization.ipynb
     - "Additional Topics": lec4/4.1.md
 
   - "Lec 5: 11/03 F (Room 529)":
