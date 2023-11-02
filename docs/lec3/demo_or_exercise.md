@@ -22,12 +22,12 @@ Here's the code structure and brief descriptions of each file:
 
 **Scripts used in the demo**
 
-- [main.py](docs/assets/msds-demo3/main.py)
-- [commands.py](docs/assets/msds-demo3/commands.py)
-- [entities.py](docs/assets/msds-demo3/entities.py)
-- [requirements.txt](docs/assets/msds-demo3/requirements.txt)
-- [config.ini](docs/assets/msds-demo3/config.ini)
-- [consumer.py](docs/assets/msds-demo3/consumer.py)
+- [main.py](../assets/msds-demo3/main.py)
+- [commands.py](../assets/msds-demo3/commands.py)
+- [entities.py](../assets/msds-demo3/entities.py)
+- [requirements.txt](../assets/msds-demo3/requirements.txt)
+- [config.ini](../assets/msds-demo3/config.ini)
+- [consumer.py](../assets/msds-demo3/consumer.py)
 
 
 Note: FastAPI is a modern web framework for building APIs with Python based on standard Python type hints. It's used here for its simplicity and speed, allowing for easy setup of API endpoints.

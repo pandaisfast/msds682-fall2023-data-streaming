@@ -64,9 +64,9 @@ This request would create 5 goalkeepers. Adjust the "position" value as needed f
 
 **Scripts used in the demo**
 
-- [main.py](docs/assets/msds-demo3-additional/main.py)
-- [commands.py](docs/assets/msds-demo3-additional/commands.py)
-- [entities.py (unchanged)](docs/assets/msds-demo3-additional/entities.py)
-- [requirements.txt (unchanged)](docs/assets/msds-demo3-additional/requirements.txt)
-- [config.ini (unchanged)](docs/assets/msds-demo3-additional/config.ini)
-- [consumer.py (unchanged)](docs/assets/msds-demo3-additional/consumer.py)
+- [main.py](../assets/msds-demo3-additional/main.py)
+- [commands.py](../assets/msds-demo3-additional/commands.py)
+- [entities.py (unchanged)](../assets/msds-demo3-additional/entities.py)
+- [requirements.txt (unchanged)](../assets/msds-demo3-additional/requirements.txt)
+- [config.ini (unchanged)](../assets/msds-demo3-additional/config.ini)
+- [consumer.py (unchanged)](../assets/msds-demo3-additional/consumer.py)
