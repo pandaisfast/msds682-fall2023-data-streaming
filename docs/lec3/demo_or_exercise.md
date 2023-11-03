@@ -220,6 +220,15 @@ An API endpoint `@app.post('/api/soccer_players')` is established. This endpoint
         SASL_PASSWORD=...
     ```
 
+The Confluent Cloud would have the below message with 5 new soccer players. 
+
+<div class="result" markdown>
+
+![Web_2](<../assets/demo_or_exercise/demo3a_result_page.png>){align=left width=600}
+<div style="clear:both;"></div>
+</div>
+
+
 5. **Kafka Environment**:
    Given that Kafka is used as the messaging queue in your code, make sure Kafka services are up and accessible from the application server. You might need to start Kafka services or ensure network configurations permit connections.
 
