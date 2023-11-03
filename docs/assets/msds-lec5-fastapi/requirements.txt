@@ -1,0 +1,7 @@
+kafka-python
+fastapi[all]
+python-dotenv
+confluent_kafka
+Faker
+pydantic
+configparser

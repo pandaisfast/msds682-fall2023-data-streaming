@@ -1,6 +1,8 @@
-kafka-python
 fastapi[all]
+fastavro
 python-dotenv
 confluent_kafka
 Faker
 pydantic
+configparser
+requests
