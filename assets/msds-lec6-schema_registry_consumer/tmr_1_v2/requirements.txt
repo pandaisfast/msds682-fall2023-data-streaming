@@ -1,0 +1,5 @@
+confluent-kafka==1.8.2
+fastavro==1.4.11
+fastapi[all]== 0.75.1
+python-dotenv==0.20.0
+Faker==13.3.4
