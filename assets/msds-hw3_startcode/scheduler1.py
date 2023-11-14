@@ -1,5 +1,11 @@
 # Script (with AsyncIOScheduler):
 
+#########################################################
+#                                                       #
+#  DON'T CHANGE ANYTHING HERE IN THIS SCRIPT            #
+#                                                       #
+#########################################################
+
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 import aiohttp
