@@ -30,7 +30,7 @@ Upon completing this assignment, you should be able to:
 
 ## Resources
 
-You will be provided with a starter code package that includes several Python files. Familiarize yourself with the structure and purpose of each file as outlined in the assignment's introduction.
+You will be provided with a [starter code file](https://github.com/pandaisfast/msds682-fall2023-data-streaming/tree/main/docs/assets/msds-hw3_startcode) that includes several Python files. Familiarize yourself with the structure and purpose of each file as outlined in the assignment's introduction.
 
 ### Structure of the helper code
 
