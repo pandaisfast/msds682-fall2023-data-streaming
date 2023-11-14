@@ -162,7 +162,6 @@ nav:
     - "Notebook - Consumer": assets/msds-lec3-consumer/demo_d_consumer_v2.ipynb
     - "Demo 3A": lec3/demo_or_exercise.md
     - "Demo 3B": lec3/demo_or_exercise_2.md
-    - "Assignment 2": lec3/assignment.md
 
   - "Lec 4: 10/31 T (Room 529)":
     - lec4/index.md
@@ -179,7 +178,8 @@ nav:
   - "Lec 7: 11/10 F (Room 529)":
     - lec7/index.md
     - "Additional Topics": lec7/7.1.md
-
+    - "Assignment 3": lec7/assignment3.md
+    
   - "Lec 8: 11/14 T (Room 529)":
     - lec8/index.md
     - "Additional Topics": lec8/8.1.md
