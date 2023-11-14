@@ -86,9 +86,9 @@ Submit the following components (15 points plus extra 5 points).
    
     [Screenshot example](https://github.com/pandaisfast/msds682-fall2023-data-streaming/blob/main/docs/assets/msds-hw3_startcode/Example%20Screenshot.png) 
      
-    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing the trip data as well as driver and rider data.  
+    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal. Your screenshot must show your *computer name* in the terminal and also logs of successfully producing the trip data as well as driver and rider data.  
 
-    (b) **Scheduler Execution (5pts)**: Take a screenshot of either `scheduler1.py` or `scheduler2.py` running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing messages continuously.  
+    (b) **Scheduler Execution (5pts)**: Take a screenshot of either `scheduler1.py` or `scheduler2.py` running in the terminal. Your screenshot must show your *computer name* in the terminal and also logs of successfully producing messages continuously.  
 
 - **Extra Credit Challenge**
 
