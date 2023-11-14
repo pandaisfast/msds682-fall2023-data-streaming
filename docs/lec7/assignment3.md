@@ -76,7 +76,7 @@ Directory .
 
 ## Deliverables
 
-Submit the following components (15 points plus extra 5 points).
+Submit the following components (15 points plus extra 5 points). 
 
 - **Core Implementation**
 
@@ -84,7 +84,9 @@ Submit the following components (15 points plus extra 5 points).
 
 - **Screenshots Demonstrating Functionality**
    
-    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing the trip data as well as driver and rider data. 
+    [Screenshot example](https://github.com/pandaisfast/msds682-fall2023-data-streaming/blob/main/docs/assets/msds-hw3_startcode/Example%20Screenshot.png) 
+     
+    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing the trip data as well as driver and rider data.  
 
     (b) **Scheduler Execution (5pts)**: Take a screenshot of either `scheduler1.py` or `scheduler2.py` running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing messages continuously.  
 
