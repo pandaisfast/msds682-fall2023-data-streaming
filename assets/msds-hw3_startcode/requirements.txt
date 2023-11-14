@@ -1,0 +1,11 @@
+fastapi[all]
+fastavro
+python-dotenv
+confluent_kafka
+Faker
+pydantic
+configparser
+requests
+apscheduler
+numpy
+aiohttp
