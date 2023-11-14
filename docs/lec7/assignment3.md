@@ -16,7 +16,7 @@
 
 In this assignment, you will create a Python application that integrates Kafka for message processing using FastAPI. Your task involves setting up a Kafka producer and consumer, defining schemas for data serialization, and implementing a scheduler to manage message production.
 
-This assignment is designed to be challenging and will require a good understanding of several advanced Python concepts. Good luck!
+This assignment is designed to be challenging and will require a good understanding of several advanced Python concepts. I highly recommend spend time to go over Demo 5B in order to successfully earn the points. Good luck!
 
 ## Learning Outcomes
 
@@ -84,9 +84,9 @@ Submit the following components (15 points plus extra 5 points).
 
 - **Screenshots Demonstrating Functionality**
    
-    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal.
+    (a) **FastAPI Application (5pts)**: Take a screenshot showing the FastAPI application running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing the trip data as well as driver and rider data. 
 
-    (b) **Scheduler Execution (5pts)**: Take a screenshot of either `scheduler1.py` or `scheduler2.py` running in the terminal.
+    (b) **Scheduler Execution (5pts)**: Take a screenshot of either `scheduler1.py` or `scheduler2.py` running in the terminal. Your screenshot must show your terminal computer name and logs of successfully producing messages continuously.  
 
 - **Extra Credit Challenge**
 
