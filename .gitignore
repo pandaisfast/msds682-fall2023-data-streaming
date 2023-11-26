@@ -3,6 +3,8 @@ tmr/
 README_web.md
 docs/assets/msds-demo2-additional/.venv
 
+**/airflow/
+**/airflow_opt/
 
 # python -m venv venv
 # 
