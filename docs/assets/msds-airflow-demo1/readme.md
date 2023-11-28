@@ -44,6 +44,8 @@ Replace `<path_to_your_airflow_directory>` with the actual path where you want A
 Run the following commands to install the specific version of Airflow:
 
 ```bash
+echo $AIRFLOW_HOME
+
 AIRFLOW_VERSION=2.7.3
 PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
@@ -65,7 +67,7 @@ If you want to run the individual parts of Airflow manually rather than using th
 airflow db migrate
 
 airflow users create \
-    --username admin \
+    --username airflow \
     --firstname airflow \
     --lastname airflow  \
     --role Admin \
@@ -76,6 +78,8 @@ airflow webserver --port 8080
 airflow scheduler
 
 ```
+
+
 ## Step 4: Access Airflow Web UI
 
 Visit `localhost:8080` in your browser. Log in with the admin account (details are shown in the terminal).
@@ -136,7 +140,9 @@ airflow users create \
     --email wgu9@usfca.edu
 ```
 
-Replace the email and username with appropriate values. This command creates a new admin user for Airflow.
+Replace the email and username with appropriate values. This command creates a new admin user for Airflow. 
+
+There will be a prompt to create a password.
 
 
 
