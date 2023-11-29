@@ -2,9 +2,10 @@ tmr/
 .DS_Store
 README_web.md
 docs/assets/msds-demo2-additional/.venv
-
-**/airflow/
+**/airflow/logs/dags/__pycache__
+**/airflow/logs
 **/airflow_opt/
+**/source/
 
 # python -m venv venv
 # 
