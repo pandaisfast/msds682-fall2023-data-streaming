@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-hw3/readme/</loc>
-         <lastmod>2023-11-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec2-topic-producer/demo_a_creating_topic/</loc>
          <lastmod>2023-11-29</lastmod>
          <changefreq>daily</changefreq>
@@ -47,21 +42,6 @@
     </url>
     <url>
          <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/assets/msds-lec3-consumer/demo_d_consumer_v2/</loc>
-         <lastmod>2023-11-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/course_project/project_examples/</loc>
-         <lastmod>2023-11-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/course_project/project_guidelines/</loc>
-         <lastmod>2023-11-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pandaisfast.github.io/msds682-fall2023-data-streaming/course_project/project_intro/</loc>
          <lastmod>2023-11-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
