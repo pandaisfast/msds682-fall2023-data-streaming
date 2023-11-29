@@ -82,9 +82,6 @@ hello_world_2_task
 [hello_world_task, hello_world_2_task] >> python_script_3_task
 python_script_3_task >> generate_run_details_task
 
-
-
-
     # airflow tasks test Demo_2 hello_world_task 2023-01-01
     # airflow tasks test Demo_2 hello_world_2_task 2023-01-01
     # airflow tasks test Demo_2 python_script_3_task 2023-01-01

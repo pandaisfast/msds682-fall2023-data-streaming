@@ -38,19 +38,19 @@ def save_datetime_fn(ti):
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2023, 1, 1),
+    'start_date': datetime(2023, 7, 1),
     'email': ['your_email@example.com'],
     'email_on_failure': False,
     'email_on_retry': False,
-    'retries': 1,
+    'retries': 2,
     'retry_delay': timedelta(minutes=5),
 }
 
 # Instantiate the DAG
 with DAG(
-    'Demo_1',
+    'Demo_1_updated',
     default_args=default_args,
-    description='Demo 1',
+    description='Demo 1 - Updated',
     schedule_interval='* * * * *',  # Cron expression (every minute)
     catchup=False,
 ) as dag:
@@ -76,6 +76,6 @@ with DAG(
     # Set task dependencies
     get_datetime >> process_datetime >> save_datetime
 
-# airflow tasks test Demo_1 get_datetime 2023-01-01
-# airflow tasks test Demo_1 process_datetime 2023-01-01
-# airflow tasks test Demo_1 save_datetime 2023-01-01
+# airflow tasks test Demo_1_updated get_datetime 2023-01-01
+# airflow tasks test Demo_1_updated process_datetime 2023-01-01
+# airflow tasks test Demo_1_updated save_datetime 2023-01-01
