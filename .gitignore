@@ -6,7 +6,7 @@ docs/assets/msds-demo2-additional/.venv
 **/airflow/logs
 **/airflow_opt/
 **/source/
-
+**/msds-lec7-faust_DEPRECATED
 # python -m venv venv
 # 
 # Byte-compiled / optimized / DLL files
