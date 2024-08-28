@@ -74,10 +74,12 @@ def make_producer() -> SerializingProducer:
     schema_reg_client = SchemaRegistryClient(schema_registry_conf)
 
     # Create AvroSerializer using the new RideRequest schema
+    ## note: The Schema Registry is involved when the AvroSerializer serializes the data because it may need to fetch or register the schema.
     avro_serializer = AvroSerializer(
-        schema_registry_client=schema_reg_client,
-        schema_str=schemas.ride_request_schema,  
-        to_dict=lambda ride_request, ctx: ride_request.dict(by_alias=True)
+        schema_registry_client=schema_reg_client, # this is used to interact with the Confluent Schema Registry service.
+        schema_str=schemas.ride_request_schema,  # the actual Avro schema (as a string) from schemas.ride_request_schema that defines the structure of the RideRequest data that will be serialized.
+        to_dict=lambda ride_request, ctx: ride_request.dict(by_alias=True) #  This is a function used by the serializer to convert the RideRequest object into a dictionary format that matches the Avro schema. The 
+        # In Avro serializer, the context (ctx) is an object that provides context for the serialization process.
     )
 
     # Create and return SerializingProducer with a simplified serializer configuration
@@ -115,7 +117,7 @@ async def create_ride_request(ride_request: CreateRideRequestCommand):
     # Produce the ride request to the Kafka topic
     producer.produce(
         topic=os.environ['TOPICS_NAME'],
-        key=str(ride_request_data.userId),
+        key=str(ride_request_data.userId), # Using userId as key (previously we used name), could be the requestId too
         value=ride_request_data,
         on_delivery=ProducerCallback(ride_request_data)
     )
@@ -139,7 +141,7 @@ async def create_ride_requests(command: CreateRideRequestsCommand):
         # Produce each ride request to the Kafka topic
         producer.produce(
             topic=os.environ['TOPICS_NAME'],
-            key=str(ride_request_data.userId),  # Using userId as key, could be the requestId too
+            key=str(ride_request_data.userId),  # Using userId as key (previously we used name), could be the requestId too
             value=ride_request_data,
             on_delivery=ProducerCallback(ride_request_data)  # Assuming ProducerCallback is defined elsewhere
         )
@@ -230,7 +232,6 @@ async def create_random_ride_request():
     
     producer.flush()
     return ride_request_data
-
 
 # curl -X POST "http://localhost:8001/api/ride-request/random" \
 # -H "Accept: application/json"
