@@ -15,4 +15,8 @@ pip install -r requirements.txt
 
 ```
 mkdocs new .
+mkdocs serve
 ```
+
+Visit locally
+`http://127.0.0.1:8000/`
